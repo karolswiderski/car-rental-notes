@@ -11,7 +11,13 @@ namespace car_rental_notes.Controllers
         // GET: Board
         public ActionResult Index()
         {
-            return View();
+            List<BoardVM> boardList;
+
+            using (Db db = new Db()) {
+                boardList = db.Board.ToArray().Select(x => new BoardVM(x)).ToList();
+            }
+
+            return View(boardList);
         }
     }
 }

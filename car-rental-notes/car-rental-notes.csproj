@@ -325,6 +325,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="StylesCSS\Board\NoteCSS.css" />
     <Content Include="StylesCSS\Layout\LayoutCSS.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -349,9 +350,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Board\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StylesCSS\Board\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />

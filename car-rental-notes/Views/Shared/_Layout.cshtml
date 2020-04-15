@@ -45,7 +45,7 @@
 
             <div id="content-box">
                 <div id="top-tools-bar">
-                    @RenderSection("top-tools-bar", false)
+                    @RenderSection("top_tools_bar", false)
                 </div>
 
                 @RenderBody();
@@ -58,7 +58,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/Content/css")
     @Scripts.Render("~/bundles/layout")
     @RenderSection("scripts", required: false)
 </body>
