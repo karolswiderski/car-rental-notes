@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="@Url.Content("~/StylesCSS/Layout/LayoutCSS.css")" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="@Url.Content("~/StylesCSS/Layout/LayoutCSS.css")" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
     <div id="main-container">
 
         <div id="left-menu-container">
@@ -25,7 +25,7 @@
             </nav>
 
             <div id="main-menu-box">
-                <ul>
+                <ul id="mmb-ul-element">
                     <li><a href="#">OGŁOSZENIA</a></li>
                     <li><a href="/Board/Index">TABLICA</a></li>
                     <li><a href="#">LISTA</a></li>
@@ -45,11 +45,11 @@
 
             <div id="content-box">
                 <div id="top-tools-bar">
-                       @RenderSection("top-tools-bar", false)
+                    @RenderSection("top-tools-bar", false)
                 </div>
 
                 @RenderBody();
-           </div>
+            </div>
         </div>
 
     </div>
@@ -57,6 +57,9 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Content/css")
+    @Scripts.Render("~/bundles/layout")
     @RenderSection("scripts", required: false)
 </body>
 </html>
