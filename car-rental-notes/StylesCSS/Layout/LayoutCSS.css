@@ -15,6 +15,10 @@ a:active {
     text-decoration: none;
 }
 
+.main-container {
+    width: 100%;
+    height: 100%;
+}
 
 /*#endregion FOUNDATIONS */
 
@@ -23,7 +27,7 @@ a:active {
 /*#region LEFTMENU */
 
 #left-menu-container {
-    width: 20%;
+    width: 0.5%;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -100,14 +104,32 @@ a:active {
 
 /*--------------------------------------- CONTENT ------>- */
 /*#region CONTENT */
-    .main-container {
-        width: 100%;
-        height: 100%;
-    }
+
+
 
 #page-content {
     transition: margin-left 0.5s;
-    margin-left: 20%;
+    margin-left: 0.5%;
+    height: 100%;
+}
+
+#open-close-left-menu {
+    width: 0.5%;
+    height: 80%;
+    margin-top: 5em;
+    background-color: rgba(107, 91, 149, 0.1);
+    float: left;
+    color: #b3b3cc;
+    display: flex;
+    border-radius: 0 2em 2em 0;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+#content-box {
+    float: left;
+    width: 99.5%;  
     height: 100%;
 }
 

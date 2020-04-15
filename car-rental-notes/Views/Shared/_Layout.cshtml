@@ -41,11 +41,15 @@
         </div>
 
         <div id="page-content">
-            <div id="top-tools-bar">
-                @RenderSection("top-tools-bar", false)
-            </div>
+            <div id="open-close-left-menu" onmouseover=""></div>
 
-            @RenderBody();
+            <div id="content-box">
+                <div id="top-tools-bar">
+                       @RenderSection("top-tools-bar", false)
+                </div>
+
+                @RenderBody();
+           </div>
         </div>
 
     </div>
