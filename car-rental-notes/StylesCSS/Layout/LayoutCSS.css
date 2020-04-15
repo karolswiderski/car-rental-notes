@@ -1,0 +1,130 @@
+﻿/*--------------------------------------- FOUNDATIONS -->- */
+/*#region FOUNDATIONS */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2a2b30;
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/*#endregion FOUNDATIONS */
+
+
+/*--------------------------------------- LEFT MENU ---->- */
+/*#region LEFTMENU */
+
+#left-menu-container {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #6b5b95;
+    opacity: 0.1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 1.5em;
+}
+
+#logo-box {
+    width: 0%;
+    height: 20%;
+    background-color: #6b5b95;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+}
+
+#left-menu-navigation {
+    width: 100%;
+    padding-top: 5%;
+    text-align: left;
+    color: #6b5b95;
+    font-size: 0.6em;
+    font-family: "Raleway", sans-serif;
+    padding: 0 0.3em 0 0.3em;
+    display: none;
+}
+
+    #left-menu-navigation ul li { display: inline; }
+
+        #left-menu-navigation ul li:hover { color: #6b5b95; }
+
+        #left-menu-navigation ul li i { color: #4d0026; }
+
+#main-menu-box ul {
+    display: none;
+    margin: 0;
+    padding: 5% 0 0 15%;
+}
+
+    #main-menu-box ul li {
+        list-style: none;
+        text-align: left;
+        font-size: 1.3em;
+        padding: 0.5em 0 0.5em 0;
+    }
+
+    #main-menu-box ul li a { color: #b3b3cc; }
+
+        #main-menu-box ul li a:hover { color: #6b5b95; }
+
+#back-to-content-box {
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    font-size: 1.8em;
+    color: #b3b3cc;
+    position: absolute;
+    margin-left: 80%;
+    margin-bottom: 5%;
+}
+
+    #back-to-content-box:hover {
+        color: #6b5b95;
+    }
+
+/*#endregion LEFTMENU */
+
+
+/*--------------------------------------- CONTENT ------>- */
+/*#region CONTENT */
+    .main-container {
+        width: 100%;
+        height: 100%;
+    }
+
+#page-content {
+    transition: margin-left 0.5s;
+    margin-left: 20%;
+    height: 100%;
+}
+
+#top-tools-bar {
+    width: 80%;
+    height: 5%;
+    background-color: #1c1d22;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #b3b3cc;
+    font-size: 100%;
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+/*#endregion CONTENT */

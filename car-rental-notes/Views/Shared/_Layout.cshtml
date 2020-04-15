@@ -3,37 +3,53 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+
+    <link href="@Url.Content("~/StylesCSS/Layout/LayoutCSS.css")" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    
+    <div id="main-container">
+
+        <div id="left-menu-container">
+
+            <div id="logo-box"></div>
+
+            <nav id="left-menu-navigation">
+                <ul>
+                    <li>MENU</li>
                 </ul>
+            </nav>
+
+            <div id="main-menu-box">
+                <ul>
+                    <li><a href="#">OGŁOSZENIA</a></li>
+                    <li><a href="/Board/Index">TABLICA</a></li>
+                    <li><a href="#">LISTA</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#">MOJE KONTO</a></li>
+                </ul>
+
+            </div>
+
+            <div id="back-to-content-box">
+                <i id="back-to-content-btn" onclick="" class="far fa-arrow-alt-circle-left"></i>
             </div>
         </div>
+
+        <div id="page-content">
+            <div id="top-tools-bar">
+                @RenderSection("top-tools-bar", false)
+            </div>
+
+            @RenderBody();
+        </div>
+
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using car_rental_notes.Models.Data;
+using car_rental_notes.Models.ViewModels.Board;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace car_rental_notes.Controllers
