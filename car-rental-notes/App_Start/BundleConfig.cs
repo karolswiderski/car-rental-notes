@@ -27,9 +27,10 @@ namespace car_rental_notes
             // ----------------------------------------------------------------------------------------------------
 
             bundles.Add(new StyleBundle("~/bundles/layout").Include(
-
                       "~/Scripts/myScripts/Layout/left-menu.js",
                       "~/Scripts/myScripts/Layout/set-display.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/board_index").Include());
 
         }
     }

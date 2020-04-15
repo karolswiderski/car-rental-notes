@@ -1,4 +1,4 @@
-﻿/*--------------------------------------- NOTE ------->- */
+﻿/* --------------------------------------- NOTE ------->- */
 /*#region NOTE*/
 
 #table {
@@ -44,8 +44,8 @@
 /*#endregion NOTE*/
 
 
-/*--------------------------------------- FRONT SIDE ->- */
-/*#region FRONTSIDE*/
+/* --------------------------------------- FRONT SIDE ->- */
+/*#region FRONT_SIDE*/
 
 .front-note-side {
     width: 100%;
@@ -91,11 +91,11 @@
     bottom: 0
 }
 
-/*#endregion FRONTSIDE*/
+/*#endregion FRONT_SIDE*/
 
 
-/*--------------------------------------- BACK SIDE -->- */
-/*#region BACKSIDE*/
+/* --------------------------------------- BACK SIDE -->- */
+/*#region BACK_SIDE*/
 
 .back-note-side {
     width: 100%;
@@ -191,5 +191,25 @@
     font-size: 90%;
 }
 
-/*#endregion BACKSIDE*/
+/*#endregion BACK_SIDE*/
 
+
+/* ---------------------------- TOP TOOLS BAR SECTION ->- */
+/*#region TOP_TOOLS_BAR_SECTION*/
+
+#top-tools-box-1, #top-tools-box-5 {
+    height: 100%;
+    padding: 0 2% 0 2%;
+    display: flex;
+    align-items: center;
+}
+
+#top-tools-box-2, #top-tools-box-4 {
+    padding: 0 2% 0 2%;
+}
+
+    #top-tools-box-2:hover, #top-tools-box-4:hover, #top-tools-box-5:hover {
+        color: #6b5b95;
+    }
+
+/*#endregion TOP_TOOLS_BAR_SECTION*/
