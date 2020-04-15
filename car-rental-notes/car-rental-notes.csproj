@@ -202,7 +202,9 @@
     </Compile>
     <Compile Include="Models\Data\BoardDTO.cs" />
     <Compile Include="Models\Data\Db.cs" />
+    <Compile Include="Models\Data\OperationsDTO.cs" />
     <Compile Include="Models\ViewModels\Board\BoardVM.cs" />
+    <Compile Include="Models\ViewModels\Board\Operations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -349,6 +351,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Board\Index.cshtml" />
+    <Content Include="Views\Board\AddNewNote.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

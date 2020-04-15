@@ -13,11 +13,34 @@ namespace car_rental_notes.Controllers
         {
             List<BoardVM> boardList;
 
-            using (Db db = new Db()) {
+            using (Db db = new Db())
+            {
                 boardList = db.Board.ToArray().Select(x => new BoardVM(x)).ToList();
             }
 
             return View(boardList);
         }
+
+
+        [HttpGet]
+        public ActionResult AddNewNote()
+        {
+            BoardVM boardVM = new BoardVM();
+
+            using (Db db = new Db())
+            {
+                boardVM.Operations = new SelectList(db.Operations.ToList(), "Id", "Name");
+            }
+
+            return PartialView(boardVM);
+        }
+
+
+
+
+
+
+
+
     }
 }

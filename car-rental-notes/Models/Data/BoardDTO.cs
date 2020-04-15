@@ -22,5 +22,8 @@ namespace car_rental_notes.Models.Data
         public string Uwagi { get; set; }
         public string Wykonawca { get; set; }
         public int Wykonawca_Id { get; set; }
+
+        [ForeignKey("Rodzaj_Operacji_Id")]
+        public virtual OperationsDTO Operation { get; set; }
     }
 }

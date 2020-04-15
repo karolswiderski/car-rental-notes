@@ -1,5 +1,7 @@
 ﻿using car_rental_notes.Models.Data;
 using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace car_rental_notes.Models.ViewModels.Board
 {
@@ -39,5 +41,8 @@ namespace car_rental_notes.Models.ViewModels.Board
         public string Uwagi { get; set; }
         public string Wykonawca { get; set; }
         public int Wykonawca_Id { get; set; }
+
+
+        public IEnumerable<SelectListItem> Operations { get; set; }
     }
 }
