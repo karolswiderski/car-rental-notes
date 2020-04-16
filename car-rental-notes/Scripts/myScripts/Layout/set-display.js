@@ -60,7 +60,7 @@ function desktop() {
 
             document.getElementById("top-tools-bar").style.display = "flex";
             document.getElementById("top-tools-bar").style.fontSize = "1.5vw";
-            document.getElementById("top-tools-bar").style.height = "4vw";
+            document.getElementById("top-tools-bar").style.height = "3vw";
 
             console.log("desktop");
         }

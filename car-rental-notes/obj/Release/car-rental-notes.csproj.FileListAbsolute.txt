@@ -216,3 +216,4 @@ C:\Users\kswid\OneDrive\Pulpit\rzeczy\projekty\car-rental-notes\car-rental-notes
 C:\Users\kswid\OneDrive\Pulpit\rzeczy\projekty\car-rental-notes\car-rental-notes\obj\Release\car-rental-notes.csproj.CopyComplete
 C:\Users\kswid\OneDrive\Pulpit\rzeczy\projekty\car-rental-notes\car-rental-notes\obj\Release\car-rental-notes.dll
 C:\Users\kswid\OneDrive\Pulpit\rzeczy\projekty\car-rental-notes\car-rental-notes\obj\Release\car-rental-notes.pdb
+C:\Users\kswid\OneDrive\Pulpit\rzeczy\projekty\car-rental-notes\car-rental-notes\obj\Release\car-rental-notes.csprojAssemblyReference.cache

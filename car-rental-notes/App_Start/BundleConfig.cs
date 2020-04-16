@@ -30,7 +30,11 @@ namespace car_rental_notes
                       "~/Scripts/myScripts/Layout/left-menu.js",
                       "~/Scripts/myScripts/Layout/set-display.js"));
 
-            bundles.Add(new StyleBundle("~/bundles/board_index").Include());
+            bundles.Add(new StyleBundle("~/bundles/board_index").Include(
+                "~/Scripts/myScripts/Board/show-addnewnote.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/addnewnote").Include(
+                "~/Scripts/myScripts/Board/choose-option-in-addnewnote.js"));
 
         }
     }
