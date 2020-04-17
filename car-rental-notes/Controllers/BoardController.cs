@@ -17,7 +17,8 @@ namespace car_rental_notes.Controllers
                 TempData["SelectedDate"] = System.DateTime.Now.Add(new TimeSpan(0, 0, 0, 0)).ToString("dd/MM/yyyy");
                 TempData["NumberOfDays"] = 0;
             }
-            else { //jeżeli metoda Index została wywolana w NextDay/PreviousDay:
+            else
+            { //jeżeli metoda Index została wywolana w NextDay/PreviousDay:
                 TempData["SelectedDate"] = whichDay;
                 TempData["NumberOfDays"] = numberOfDays;
             }
@@ -77,9 +78,9 @@ namespace car_rental_notes.Controllers
             return PartialView(boardVM);
         }
 
-
         [HttpPost]
-        public ActionResult AddNewNote(BoardVM boardVM) {
+        public ActionResult AddNewNote(BoardVM boardVM)
+        {
 
             using (Db db = new Db())
             {
@@ -107,7 +108,30 @@ namespace car_rental_notes.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Board/DeleteNote
+        [HttpGet]
+        public ActionResult DeleteNote(int id)
+        {
 
+            using (Db db = new Db())
+            {
+                BoardDTO dto = db.Board.Find(id);
+                db.Board.Remove(dto);
+                db.SaveChanges();
+            }
+
+            try
+            {
+                int numberOfDays = Convert.ToInt32(TempData["NumberOfDays"]);
+                string whichDay = TempData["SelectedDate"].ToString();
+                return RedirectToAction("Index", new { flag = false, numberOfDays, whichDay });
+            }
+            catch (NullReferenceException e)
+            {
+                return RedirectToAction("Index");
+            }
+
+        }
 
 
 
