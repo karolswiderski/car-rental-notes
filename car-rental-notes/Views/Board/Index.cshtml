@@ -6,10 +6,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
-
-
+ <link rel="shortcut icon" href="">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <body>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/board_index")
 
     <div id="board-top-bar"></div>
 
@@ -28,7 +31,8 @@
     <ul id="table">
         @foreach (var item in Model)
         {
-            <li>
+            <li onload="">
+
                 <div class="single-note-box" id="@item.Board_Id" accesskey="9">
                     <div class="front-note-side">
 
@@ -66,12 +70,15 @@
                         </div>
                     </div>
                 </div>
+                <script>
+
+                    set_note_layout('@item.Rodzaj_Operacji',@item.Board_Id);
+                </script>
             </li>
         }
         <li></li>
     </ul>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/board_index")
+
 
 </body>
