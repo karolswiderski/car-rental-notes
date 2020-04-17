@@ -248,6 +248,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\myScripts\Board\choose-option-in-addnewnote.js" />
     <Content Include="Scripts\myScripts\Board\operations-with-note.js" />
+    <Content Include="Scripts\myScripts\Board\operations-with-topToolsBar.js" />
     <Content Include="Scripts\myScripts\Board\set-note-layout.js" />
     <Content Include="Scripts\myScripts\Board\show-addnewnote.js" />
     <Content Include="Scripts\myScripts\Layout\left-menu.js" />

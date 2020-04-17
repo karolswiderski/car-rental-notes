@@ -1,5 +1,6 @@
 ﻿using car_rental_notes.Models.Data;
 using car_rental_notes.Models.ViewModels.Board;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -9,8 +10,18 @@ namespace car_rental_notes.Controllers
     public class BoardController : Controller
     {
         // GET: Board
-        public ActionResult Index()
+        public ActionResult Index(bool flag = true, int numberOfDays = 0, string whichDay = "01/01/2020")
         {
+            if (flag == true)
+            {
+                TempData["SelectedDate"] = System.DateTime.Now.Add(new TimeSpan(0, 0, 0, 0)).ToString("dd/MM/yyyy");
+                TempData["NumberOfDays"] = 0;
+            }
+            else { //jeżeli metoda Index została wywolana w NextDay/PreviousDay:
+                TempData["SelectedDate"] = whichDay;
+                TempData["NumberOfDays"] = numberOfDays;
+            }
+
             List<BoardVM> boardList;
 
             using (Db db = new Db())
@@ -21,6 +32,37 @@ namespace car_rental_notes.Controllers
             return View(boardList);
         }
 
+        // GET: Board/NextDay
+        [HttpGet]
+        public ActionResult NextDay()
+        {
+            int numberOfDays = Convert.ToInt32(TempData["NumberOfDays"]);
+
+            TempData["NumberOfDays"] = numberOfDays++;
+
+            TempData["SelectedDate"] = System.DateTime.Now.Add(new TimeSpan(numberOfDays, 0, 0, 0)).ToString("dd/MM/yyyy");
+
+            string whichDay = TempData["SelectedDate"].ToString();
+
+
+            return RedirectToAction("Index", new { flag = false, numberOfDays, whichDay });
+        }
+
+        // GET: Board/PreviousDay
+        [HttpGet]
+        public ActionResult PreviousDay()
+        {
+            int numberOfDays = Convert.ToInt32(TempData["NumberOfDays"]);
+
+            TempData["NumberOfDays"] = numberOfDays--;
+
+            TempData["SelectedDate"] = System.DateTime.Now.Add(new TimeSpan(numberOfDays, 0, 0, 0)).ToString("dd/MM/yyyy");
+
+            string whichDay = TempData["SelectedDate"].ToString();
+
+
+            return RedirectToAction("Index", new { flag = false, numberOfDays, whichDay });
+        }
 
         [HttpGet]
         public ActionResult AddNewNote()
