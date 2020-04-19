@@ -27,10 +27,18 @@
             <div id="main-menu-box">
                 <ul id="mmb-ul-element">
                     <li><a href="#">OGŁOSZENIA</a></li>
-                    <li><a href="/Board/Index">TABLICA</a></li>
+                    <li><a href="~/Board/Index">TABLICA</a></li>
                     <li><a href="#">LISTA</a></li>
                     <li><a href="#"></a></li>
-                    <li><a href="#">MOJE KONTO</a></li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li><a href="#">MOJE KONTO</a></li>
+                        <li><a href="~/Account/logout">WYLOGUJ SIĘ</a></li>
+                    }
+                    @if (!Request.IsAuthenticated)
+                    {
+                        <li><a href="~/Account/Login">ZALOGUJ SIĘ</a></li>
+                    }
                 </ul>
 
             </div>

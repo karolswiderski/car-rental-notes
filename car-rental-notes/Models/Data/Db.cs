@@ -6,5 +6,8 @@ namespace car_rental_notes.Models.Data
     {
         public DbSet<BoardDTO> Board { get; set; }
         public DbSet<OperationsDTO> Operations { get; set; }
+        public DbSet<UsersDTO> Users { get; set; }
+        public DbSet<RolesDTO> Roles { get; set; }
+        public DbSet<UserRolesDTO> UserRoles { get; set; }
     }
 }
