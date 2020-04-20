@@ -336,6 +336,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="StylesCSS\Account\MyAccountCSS.css" />
     <Content Include="StylesCSS\Board\AddNewNoteCSS.css" />
     <Content Include="StylesCSS\Board\IndexCSS.css" />
     <Content Include="StylesCSS\Layout\LayoutCSS.css" />
@@ -364,6 +365,8 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\MyAccount.cshtml" />
+    <Content Include="Views\Account\MyOperations.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

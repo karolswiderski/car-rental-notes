@@ -1,5 +1,6 @@
 ﻿using car_rental_notes.Models.Data;
 using car_rental_notes.Models.ViewModels.Account;
+using car_rental_notes.Models.ViewModels.Board;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,11 +56,32 @@ namespace car_rental_notes.Controllers
         }
 
         // GET: Account/Logout
-        [HttpPost]
+        [HttpGet]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("~/Account/Login");
+        }
+        
+        // GET: Account/MyAccount
+        public ActionResult MyAccount() {
+            //string userName = User.Identity.Name;
+            //if (string.IsNullOrEmpty(userName)) return Redirect("~/Board/Index");
+
+            return View();
+        }
+
+        // GET: Account/MyOperations
+        public ActionResult MyOperations() {
+            TempData["UserName"] =  User.Identity.Name;
+            List<BoardVM> boardList;
+
+            using (Db db = new Db())
+            {
+                boardList = db.Board.ToArray().Select(x => new BoardVM(x)).ToList();
+            }
+
+            return PartialView(boardList);
         }
     }
 }
