@@ -1,6 +1,7 @@
 ﻿using car_rental_notes.Models.Data;
 using car_rental_notes.Models.ViewModels.Account;
 using car_rental_notes.Models.ViewModels.Board;
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,7 +79,21 @@ namespace car_rental_notes.Controllers
 
             using (Db db = new Db())
             {
-                boardList = db.Board.ToArray().Select(x => new BoardVM(x)).ToList();
+                boardList = db.Board.ToArray().Where(x => x.Wykonawca == TempData["UserName"].ToString()).Select(x => new BoardVM(x)).ToList();
+                boardList = boardList.DistinctBy(x => x.Data_Operacji).ToList();
+            }
+
+            return PartialView(boardList);
+        }
+
+        [HttpGet]
+        public ActionResult MyOperationsPartial(string operationData)
+        {
+            List<BoardVM> boardList;
+            
+            using (Db db = new Db())
+            {
+                boardList = db.Board.ToArray().Where(x => x.Wykonawca == TempData["UserName"].ToString() && x.Data_Operacji == Convert.ToDateTime(operationData)).Select(x => new BoardVM(x)).ToList();
             }
 
             return PartialView(boardList);

@@ -367,6 +367,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\MyAccount.cshtml" />
     <Content Include="Views\Account\MyOperations.cshtml" />
+    <Content Include="Views\Account\MyOperationsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

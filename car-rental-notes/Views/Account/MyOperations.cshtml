@@ -3,33 +3,17 @@
 <div>
     <h4>BoardVM</h4>
     <hr />
+
     @foreach (var item in Model)
     {
-        if (item.Wykonawca == TempData["UserName"].ToString())
-        {
 
-            <div class="front-box-1">wykonuje: @item.Wykonawca</div>
-
-            <div class="front-box-2">@item.Rodzaj_Operacji</div>
-
-            <div class="front-box-3">@item.Miejsce_Operacji</div>
-
-            <div class="front-box-4">klasa @item.Klasa_Pojazdu</div>
-
-            <div class="front-box-5">@item.Godzina_Operacji.ToString("hh':'mm")</div>
+        <h1>@item.Data_Operacji</h1>
 
 
-            <div class="back-box-1">@item.Zlecajacy</div>
+        @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString()})
 
-            <div class="back-box-2">@item.Nazwa_Klienta</div>
 
-            <div class="back-box-3">@item.Telefon</div>
 
-            <div class="back-box-4"> @item.Samochod</div>
-
-            <div class="back-box-5"> @item.Uwagi</div>
-
-        }
     }
 </div>
 <p>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Board.BoardVM>
+
+@foreach (var item in Model)
+{
+    
+    <h2>------------ data operacji mojej karteczki: @item.Data_Operacji</h2>
+
+    <div class="front-box-1">wykonuje: @item.Wykonawca</div>
+
+    <div class="front-box-2">@item.Rodzaj_Operacji</div>
+
+    <div class="front-box-3">@item.Miejsce_Operacji</div>
+
+    <div class="front-box-4">klasa @item.Klasa_Pojazdu</div>
+
+    <div class="front-box-5">@item.Godzina_Operacji.ToString("hh':'mm")</div>
+
+
+    <div class="back-box-1">@item.Zlecajacy</div>
+
+    <div class="back-box-2">@item.Nazwa_Klienta</div>
+
+    <div class="back-box-3">@item.Telefon</div>
+
+    <div class="back-box-4"> @item.Samochod</div>
+
+    <div class="back-box-5"> @item.Uwagi</div>
+
+}
