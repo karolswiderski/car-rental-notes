@@ -1,22 +1,19 @@
 ﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Board.BoardVM>
 
-<div>
-    <h4>BoardVM</h4>
-    <hr />
+<link href="~/StylesCSS/Account/MyOperationsCSS.css" rel="stylesheet" />
+
+<div id="content">
 
     @foreach (var item in Model)
     {
 
-        <h1>@item.Data_Operacji</h1>
+        <div class="date-box">
+            <span>@item.Data_Operacji.ToString("dd/MM/yyyy")</span>
+        </div>
 
 
-        @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString()})
-
-
-
+        <div class="my-operations-partial-box">
+            @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })
+        </div>
     }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

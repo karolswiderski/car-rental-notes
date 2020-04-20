@@ -7,7 +7,6 @@
 function choose_operation(list) {
     var my_list_id = jQuery(list).attr("Id");
     var opt_value = $("#" + my_list_id).children("option:selected").val();
-    var color;
 
     if (opt_value == 1) { //wydanie
         $(".enter-data").show();
