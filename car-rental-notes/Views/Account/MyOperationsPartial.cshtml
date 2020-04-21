@@ -3,7 +3,6 @@
 
 <link href="~/StylesCSS/Board/IndexCSS.css" rel="stylesheet" />
 
-@Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/board_index")
 
 <ul id="table" style="width:100%;">
@@ -12,8 +11,6 @@
         <li>
             <div class="single-note-box" id="@item.Board_Id" accesskey="9">
                 <div class="front-note-side">
-
-                    <div class="front-box-1">wykonuje: @item.Wykonawca</div>
 
                     <div class="front-box-2">@item.Rodzaj_Operacji</div>
 
@@ -25,13 +22,6 @@
 
                 </div>
                 <div class="back-note-side">
-                    <div class="back-side-menu" onmouseover="show_back_menu(this)" onmouseout="hide_back_menu(this)">
-                        <div class="add-btn-box"><i class="fas fa-minus add-option-img"></i></div>
-                        <div class="edit-btn-box"><i class="fas fa-pencil-alt edit-option-img"></i></div>
-                        <div class="space-for-new-btn"></div>
-                        <div class="delete-btn-box"><a class="fas fa-times delete-option-img" href="/Board/DeleteNote/@item.Board_Id"></a></div>
-                    </div>
-
                     <div class="back-side-content">
 
                         <div class="back-box-1">@item.Zlecajacy</div>
@@ -48,14 +38,11 @@
                 </div>
             </div>
             <script>
-
                     set_note_layout('@item.Rodzaj_Operacji',@item.Board_Id);
             </script>
         </li>
     }
 </ul>
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/board_index")
 
 
 

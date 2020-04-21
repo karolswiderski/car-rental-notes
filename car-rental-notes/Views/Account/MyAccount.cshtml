@@ -1,8 +1,6 @@
-﻿@{
-    /**/
-
+﻿@{    
+    ViewBag.Title = "Moje konto";
     @Scripts.Render("~/bundles/jquery")
-    ViewBag.Title = "MyAccount";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -15,10 +13,25 @@
         <div id="myaccount-top-tools-box-2"> <span class="top-tools-span">Szczegóły konta</span> </div>
         <div id="myaccount-top-tools-box-3"> <span class="top-tools-span">Edycja konta</span> </div>
     }
+
     <div id="page-content-box">
 
         <div id="myOperations-partial">
-            @Html.Action("MyOperations", "Account", new { area = "" })
+            <div id="myOperations-content">
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="myOperations-date-box">
+                        <span>@item.Data_Operacji.ToString("dd/MM/yyyy"):</span>
+                    </div>
+
+
+                    <div class="my-operations-partial-box">
+                        @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })
+                    </div>
+                }
+            </div>
         </div>
 
         <div id="myAccountDetails-partial">

@@ -4,38 +4,6 @@ a:active {
     text-decoration: none;
 }
 
-/* --------------------------------------- CONTENT ---->- */
-/*#region CONTENT*/
-
-
-#myOperations-partial {
-    width: 80%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    display: block;
-}
-
-#myAccountDetails-partial {
-    width: 80%;
-    height: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    display: none;
-}
-
-#EditAccount {
-    width: 80%;
-    height: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    display: none;
-}
-
-/*#endregion CONTENT*/
 /* ---------------------------- TOP TOOLS BAR SECTION ->- */
 /*#region TOP_TOOLS_BAR_SECTION*/
 #myaccount-top-tools-box-1, #myaccount-top-tools-box-2, #myaccount-top-tools-box-3 {
@@ -53,10 +21,10 @@ a:active {
 }
 
 #myaccount-top-tools-box-2 {
-  width: 50%;
+    width: 50%;
 }
 
-span{
+span {
     margin-left: auto;
     margin-right: auto;
 }
@@ -68,3 +36,70 @@ span{
 
 
 /*#endregion TOP_TOOLS_BAR_SECTION*/
+
+
+/* ------------------------------------- PAGE CONTENT ->- */
+/*#region PAGE_CONTENT*/
+
+#myOperations-partial, #myAccountDetails-partial, #EditAccount-partial {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: none;
+}
+
+#myOperations-partial { display: block; }
+
+/*#endregion PAGE_CONTENT*/
+
+
+/* ------------------------------- OPERATIONS PARTIAL ->- */
+/*#region OPERATIONS_PARTIAL*/
+
+#myOperations-content {
+    width: 100%;
+    height: 100%;
+}
+
+.myOperations-date-box {
+    width: 15em;
+    height: 3em;
+}
+
+    .myOperations-date-box span {
+        font-size: 200%;
+        color: white;
+        margin: 5% 0 0 7%;
+    }
+
+.my-operations-partial-box {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    border-bottom: 1px dotted rgba(195, 187, 182, 0.58);
+}
+
+/*#endregion OPERATIONS_PARTIAL*/
+
+
+/* ---------------------------------- DETAILS PARTIAL ->- */
+/*#region DETAILS_PARTIAL*/
+
+
+
+/*#endregion DETAILS_PARTIAL*/
+
+
+/* ------------------------------------- EDIT PARTIAL ->- */
+/*#region EDIT_PARTIAL*/
+
+
+
+/*#endregion EDIT_PARTIAL*/
+
+
+

@@ -6,7 +6,6 @@ using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -52,7 +51,6 @@ namespace car_rental_notes.Controllers
             }
             else
             {
-                TempData["Login"] = "Zalogowano :)";
                 FormsAuthentication.SetAuthCookie(model.Login, model.ZapamietajMnie);
                 return RedirectToAction(FormsAuthentication.GetRedirectUrl(model.Login, model.ZapamietajMnie));
             }
@@ -69,15 +67,9 @@ namespace car_rental_notes.Controllers
         // GET: Account/MyAccount
         public ActionResult MyAccount()
         {
-            //string userName = User.Identity.Name;
-            //if (string.IsNullOrEmpty(userName)) return Redirect("~/Board/Index");
+            string userName = User.Identity.Name;
+            if (string.IsNullOrEmpty(userName)) return Redirect("~/Board/Index");
 
-            return View();
-        }
-
-        // GET: Account/MyOperations
-        public ActionResult MyOperations()
-        {
             TempData["UserName"] = User.Identity.Name;
             List<BoardVM> boardList;
 
@@ -87,7 +79,7 @@ namespace car_rental_notes.Controllers
                 boardList = boardList.DistinctBy(x => x.Data_Operacji).ToList();
             }
 
-            return PartialView(boardList);
+            return View(boardList);
         }
 
         [HttpGet]

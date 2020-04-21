@@ -338,7 +338,6 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="StylesCSS\Account\MyAccountCSS.css" />
-    <Content Include="StylesCSS\Account\MyOperationsCSS.css" />
     <Content Include="StylesCSS\Board\AddNewNoteCSS.css" />
     <Content Include="StylesCSS\Board\IndexCSS.css" />
     <Content Include="StylesCSS\Layout\LayoutCSS.css" />
@@ -368,7 +367,6 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\MyAccount.cshtml" />
-    <Content Include="Views\Account\MyOperations.cshtml" />
     <Content Include="Views\Account\MyOperationsPartial.cshtml" />
     <Content Include="Views\Account\MyAccountDetailsPartial.cshtml" />
     <Content Include="Views\Account\EditAccountPartial.cshtml" />
