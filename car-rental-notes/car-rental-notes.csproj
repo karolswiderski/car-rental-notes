@@ -257,6 +257,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\myScripts\Account\myaccount-set-partial.js" />
     <Content Include="Scripts\myScripts\Board\choose-option-in-addnewnote.js" />
     <Content Include="Scripts\myScripts\Board\operations-with-note.js" />
     <Content Include="Scripts\myScripts\Board\operations-with-topToolsBar.js" />
@@ -369,6 +370,7 @@
     <Content Include="Views\Account\MyAccount.cshtml" />
     <Content Include="Views\Account\MyOperations.cshtml" />
     <Content Include="Views\Account\MyOperationsPartial.cshtml" />
+    <Content Include="Views\Account\MyAccountDetailsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

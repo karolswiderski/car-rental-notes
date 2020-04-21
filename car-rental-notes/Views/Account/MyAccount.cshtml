@@ -1,21 +1,29 @@
 ﻿@{
+    /**/
+
+    @Scripts.Render("~/bundles/jquery")
     ViewBag.Title = "MyAccount";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<script src="~/Scripts/myScripts/Account/myaccount-set-partial.js"></script>
 <link href="~/StylesCSS/Account/MyAccountCSS.css" rel="stylesheet" />
 
 <body>
     @section top_tools_bar{
-        <div id="top-tools-box-1"> <a href="~/Account/MyOperations">Moje operacje</a> </div>
-        <div id="top-tools-box-5"> <a href="~/Account/AccountDetails">Szczegóły konta</a> </div>
+        <div id="myaccount-top-tools-box-1"> <span>Moje operacje</span> </div>
+        <div id="myaccount-top-tools-box-5"> <span>Szczegóły konta</span> </div>
     }
     <div id="page-content-box">
 
-        <div id="add-new-note-content">
-        @Html.Action("MyOperations", "Account", new { area = "" })
-    </div>
+        <div id="myOperations-partial">
+            @Html.Action("MyOperations", "Account", new { area = "" })
+        </div>
+
+        <div id="myAccountDetails-partial">
+            @Html.Action("MyAccountDetailsPartial", "Account", new { area = "" })
+        </div>
+
 
     </div>
 </body>

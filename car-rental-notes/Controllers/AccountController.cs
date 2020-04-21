@@ -1,6 +1,7 @@
 ﻿using car_rental_notes.Models.Data;
 using car_rental_notes.Models.ViewModels.Account;
 using car_rental_notes.Models.ViewModels.Board;
+using car_rental_notes.Views.Account;
 using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
@@ -97,6 +98,22 @@ namespace car_rental_notes.Controllers
             }
 
             return PartialView(boardList);
+        }
+
+        
+        [HttpGet]
+        public ActionResult MyAccountDetailsPartial()
+        {
+            string userName = User.Identity.Name;
+            UsersVM model;
+
+            using (Db db = new Db())
+            {
+                UsersDTO dto = db.Users.FirstOrDefault(x => x.Login == userName);
+                model = new UsersVM(dto);
+            }
+
+            return PartialView(model);
         }
     }
 }
