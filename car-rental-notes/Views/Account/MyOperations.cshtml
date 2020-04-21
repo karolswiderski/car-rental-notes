@@ -2,13 +2,15 @@
 
 <link href="~/StylesCSS/Account/MyOperationsCSS.css" rel="stylesheet" />
 
+<link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+
 <div id="content">
 
     @foreach (var item in Model)
     {
 
         <div class="date-box">
-            <span>@item.Data_Operacji.ToString("dd/MM/yyyy")</span>
+            <span>@item.Data_Operacji.ToString("dd/MM/yyyy"):</span>
         </div>
 
 

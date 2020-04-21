@@ -11,8 +11,9 @@
 
 <body>
     @section top_tools_bar{
-        <div id="myaccount-top-tools-box-1"> <span>Moje operacje</span> </div>
-        <div id="myaccount-top-tools-box-5"> <span>Szczegóły konta</span> </div>
+        <div id="myaccount-top-tools-box-1"> <span class="top-tools-span">Moje operacje</span> </div>
+        <div id="myaccount-top-tools-box-2"> <span class="top-tools-span">Szczegóły konta</span> </div>
+        <div id="myaccount-top-tools-box-3"> <span class="top-tools-span">Edycja konta</span> </div>
     }
     <div id="page-content-box">
 
@@ -22,6 +23,10 @@
 
         <div id="myAccountDetails-partial">
             @Html.Action("MyAccountDetailsPartial", "Account", new { area = "" })
+        </div>
+
+        <div id="EditAccount-partial">
+            @Html.Action("EditAccountPartial", "Account", new { area = "" })
         </div>
 
 

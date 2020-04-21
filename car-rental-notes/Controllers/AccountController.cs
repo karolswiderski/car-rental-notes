@@ -22,7 +22,8 @@ namespace car_rental_notes.Controllers
 
         // GET: Account/Login
         [HttpGet]
-        public ActionResult Login() {
+        public ActionResult Login()
+        {
             string userName = User.Identity.Name;
             if (!string.IsNullOrEmpty(userName)) return Redirect("~/Board/Index");
 
@@ -64,9 +65,10 @@ namespace car_rental_notes.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("~/Account/Login");
         }
-        
+
         // GET: Account/MyAccount
-        public ActionResult MyAccount() {
+        public ActionResult MyAccount()
+        {
             //string userName = User.Identity.Name;
             //if (string.IsNullOrEmpty(userName)) return Redirect("~/Board/Index");
 
@@ -74,8 +76,9 @@ namespace car_rental_notes.Controllers
         }
 
         // GET: Account/MyOperations
-        public ActionResult MyOperations() {
-            TempData["UserName"] =  User.Identity.Name;
+        public ActionResult MyOperations()
+        {
+            TempData["UserName"] = User.Identity.Name;
             List<BoardVM> boardList;
 
             using (Db db = new Db())
@@ -91,7 +94,7 @@ namespace car_rental_notes.Controllers
         public ActionResult MyOperationsPartial(string operationData)
         {
             List<BoardVM> boardList;
-            
+
             using (Db db = new Db())
             {
                 boardList = db.Board.ToArray().Where(x => x.Wykonawca == TempData["UserName"].ToString() && x.Data_Operacji == Convert.ToDateTime(operationData)).Select(x => new BoardVM(x)).ToList();
@@ -100,9 +103,25 @@ namespace car_rental_notes.Controllers
             return PartialView(boardList);
         }
 
-        
+
         [HttpGet]
         public ActionResult MyAccountDetailsPartial()
+        {
+            string userName = User.Identity.Name;
+            UsersVM model;
+
+            using (Db db = new Db())
+            {
+                UsersDTO dto = db.Users.FirstOrDefault(x => x.Login == userName);
+                model = new UsersVM(dto);
+            }
+
+            return PartialView(model);
+        }
+
+
+        [HttpGet]
+        public ActionResult EditAccountPartial()
         {
             string userName = User.Identity.Name;
             UsersVM model;
