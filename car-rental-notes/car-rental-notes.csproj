@@ -190,9 +190,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BoardController.cs" />
+    <Compile Include="Controllers\WallController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Data\AnnouncementsDTO.cs" />
     <Compile Include="Models\Data\BoardDTO.cs" />
     <Compile Include="Models\Data\Db.cs" />
     <Compile Include="Models\Data\OperationsDTO.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="Models\ViewModels\Account\RolesVM.cs" />
     <Compile Include="Models\ViewModels\Board\BoardVM.cs" />
     <Compile Include="Models\ViewModels\Board\Operations.cs" />
+    <Compile Include="Models\ViewModels\Wall\AnnouncementsVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ViewModels\Account\UsersVM.cs" />
   </ItemGroup>
@@ -341,6 +344,7 @@
     <Content Include="StylesCSS\Board\AddNewNoteCSS.css" />
     <Content Include="StylesCSS\Board\IndexCSS.css" />
     <Content Include="StylesCSS\Layout\LayoutCSS.css" />
+    <Content Include="StylesCSS\Wall\AnnouncementsCSS.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -370,6 +374,7 @@
     <Content Include="Views\Account\MyOperationsPartial.cshtml" />
     <Content Include="Views\Account\MyAccountDetailsPartial.cshtml" />
     <Content Include="Views\Account\EditAccountPartial.cshtml" />
+    <Content Include="Views\Wall\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

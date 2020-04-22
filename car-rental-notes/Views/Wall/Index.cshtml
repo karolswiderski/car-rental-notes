@@ -1,0 +1,31 @@
+﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Wall.AnnouncementsVM>
+
+@{
+    ViewBag.Title = "Ogłoszenia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
+
+<div id="anns">
+    <ul id="ann-table">
+
+        <li>
+            <div class="ann-daily-info">Cześć karol_swiderski! Dzisiaj mamy 3 zaplanowane zlecenia, 1 z nich jest przypisane Tobie.</div>
+        </li>
+
+
+        @foreach (var item in Model.Reverse())
+        {
+            <li>
+                <div class="ann-main-box">
+                    <div class="ann-subject"><b>@item.Temat</b></div>
+                    <div class="ann-content">@item.Tresc</div>
+                    <div class="ann-author">utworzono <i>@item.Data.Date.ToString("dd.MM.yyyy")</i> przez <i>@item.Autor</i></div>
+                </div>
+            </li>
+
+        }
+    </ul>
+</div>

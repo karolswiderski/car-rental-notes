@@ -1,0 +1,76 @@
+﻿body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+/* ------------------------------------- ANN(..) ------->- */
+/*#region ANN*/
+
+#anns {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+#ann-table {
+    list-style: none;
+    overflow: hidden;
+    font-family: "Raleway", sans-serif;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    font-size: 16px;
+    position: relative;
+    color: white;
+}
+
+    #ann-table li {
+        margin: 2em;
+        display: block;
+        position: relative;
+    }
+
+
+.ann-main-box {
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    border: 1px dotted rgba(195, 187, 182, 0.58);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.ann-subject {
+    font-size: 200%;
+    border-bottom: 1px dotted rgba(195, 187, 182, 0.58);
+    margin: 0 0 3% 0;
+    padding: 0 0 2% 0;
+    overflow: hidden;
+}
+
+.ann-content {
+    font-size: 125%;
+    overflow: auto;
+}
+
+.ann-author {
+    text-align: right;
+    font-size: 100%;
+    padding: 2% 0 0 0;
+}
+
+.ann-daily-info {
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    border: 1px dotted rgba(195, 187, 182, 0.58);
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/*#endregion ANN*/
