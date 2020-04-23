@@ -39,6 +39,9 @@ namespace car_rental_notes
             bundles.Add(new StyleBundle("~/bundles/addnewnote").Include(
                 "~/Scripts/myScripts/Board/choose-option-in-addnewnote.js"));
 
+            bundles.Add(new StyleBundle("~/bundles/wall").Include(
+                "~/Scripts/myScripts/Wall/show-addannouncemente.js"));
+
         }
     }
 }

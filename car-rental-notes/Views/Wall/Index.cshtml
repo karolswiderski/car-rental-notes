@@ -6,7 +6,15 @@
 
 }
 
+@Scripts.Render("~/bundles/jquery")
 <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
+<script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
+
+@section top_tools_bar{
+    <div id="ann-top-tools-box-1"></div>
+    <div id="ann-top-tools-box-2"><span class="be-center">OGŁOSZENIA</span></div>
+    <div id="ann-top-tools-box-3"><i class="fas fa-plus be-center" id="add-new-ann-btn"></i></div>
+}
 
 <div id="anns">
     <ul id="ann-table">
@@ -19,7 +27,7 @@
         }
 
         <li>
-            <div class="ann-main-box">
+            <div id="add-new-ann">
                 @Html.Action("AddAnnouncement", "Wall", new { area = "" })
             </div>
         </li>
