@@ -33,7 +33,16 @@ namespace car_rental_notes.Controllers
         [HttpPost]
         public ActionResult Login(LoginUserVM model)
         {
-            if (!ModelState.IsValid) return View(model);
+            if (model.Login == null || model.Haslo == null) {
+                TempData["Warning"] = "upss.. Chyba o czymś zapomniałeś.";
+                return View(model);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                TempData["Warning"] = "upss.. Coś poszło nie tak.";
+                return View(model);
+            }
 
             bool isValid = false;
             using (Db db = new Db())
@@ -46,7 +55,7 @@ namespace car_rental_notes.Controllers
 
             if (!isValid)
             {
-                ModelState.AddModelError("", "Błędny login lub hasło.");
+                TempData["Warning"] = "Nazwa użytkownika lub hasło jest błędne. ";
                 return View(model);
             }
             else
@@ -61,7 +70,7 @@ namespace car_rental_notes.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("~/Account/Login");
+            return RedirectToAction("Login");
         }
 
         // GET: Account/MyAccount
