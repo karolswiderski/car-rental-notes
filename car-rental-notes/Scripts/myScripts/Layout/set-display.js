@@ -7,7 +7,6 @@ function mobile() {
 
     function checkMedia(mql) {
         if (mql.matches) {
-            document.getElementById("left-menu-container").setAttribute("onmouseover", "openNavBox(1)");
             document.getElementById("open-close-left-menu").setAttribute("onmouseover", "openNavBox(1)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(1)");
 
@@ -31,7 +30,6 @@ function tablet() {
 
     function checkMedia(mql) {
         if (mql.matches) {
-            document.getElementById("left-menu-container").setAttribute("onmouseover", "openNavBox(2)");
             document.getElementById("open-close-left-menu").setAttribute("onmouseover", "openNavBox(2)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(2)");
 
@@ -54,7 +52,6 @@ function desktop() {
 
     function checkMedia(mql) {
         if (mql.matches) {
-            document.getElementById("left-menu-container").setAttribute("onmouseover", "openNavBox(3)");
             document.getElementById("open-close-left-menu").setAttribute("onmouseover", "openNavBox(3)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(3)");
 

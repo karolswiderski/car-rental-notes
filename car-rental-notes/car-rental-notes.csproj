@@ -375,6 +375,7 @@
     <Content Include="Views\Account\MyAccountDetailsPartial.cshtml" />
     <Content Include="Views\Account\EditAccountPartial.cshtml" />
     <Content Include="Views\Wall\Index.cshtml" />
+    <Content Include="Views\Wall\AddAnnouncement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

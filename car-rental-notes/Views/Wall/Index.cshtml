@@ -11,10 +11,18 @@
 <div id="anns">
     <ul id="ann-table">
 
-        <li>
-            <div class="ann-daily-info">Cześć karol_swiderski! Dzisiaj mamy 3 zaplanowane zlecenia, 1 z nich jest przypisane Tobie.</div>
-        </li>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <li>
+                <div class="ann-daily-info">Cześć @User.Identity.Name! Dzisiaj mamy 3 zaplanowane zlecenia, 1 z nich jest przypisane Tobie.</div>
+            </li>
+        }
 
+        <li>
+            <div class="ann-main-box">
+                @Html.Action("AddAnnouncement", "Wall", new { area = "" })
+            </div>
+        </li>
 
         @foreach (var item in Model.Reverse())
         {

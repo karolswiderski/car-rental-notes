@@ -71,6 +71,37 @@
     border-radius: 5px;
     box-sizing: border-box;
     text-align: center;
+    margin-bottom: 5%;
 }
 
 /*#endregion ANN*/
+
+
+/*add:*/
+
+.add-ann-subject {
+    font-size: 200%;
+    border-bottom: 1px dotted rgba(195, 187, 182, 0.58);
+    margin: 0 0 3% 0;
+    padding: 0 0 2% 0;
+    overflow: hidden;
+}
+
+.add-ann-content {
+    font-size: 125%;
+    overflow: auto;
+    width:100%;
+    height: 25%;
+    
+}
+
+.text-infomation {
+    min-width:100%;
+    margin-bottom: 2%;
+    font-size: 125%;
+    
+}
+
+.add-ann-box {
+
+}
