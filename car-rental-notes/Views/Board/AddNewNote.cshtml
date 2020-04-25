@@ -1,70 +1,67 @@
 ﻿@model car_rental_notes.Models.ViewModels.Board.BoardVM
 
 <link href="~/StylesCSS/Board/AddNewNoteCSS.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
 
+<link rel="stylesheet" type="text/css" href="~/Scripts/jquery-ui.min.css">
+<script type="text/javascript" src="~/Scripts/jquery-ui.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 @using (@Html.BeginForm("AddNewNote", "Board", FormMethod.Post, htmlAttributes: new { @id = "add-main-box" }))
 {
-    <body onload="open_addnewnote();">
+    
 
-        <div id="add-content-box">
-            <div id="add-left-box">
-                <div id="add-front-box-1">
-                    @Html.EditorFor(model => model.Data_Operacji, new { htmlAttributes = new { @Value = "-- wybierz date --", @class = "enter-data klasdroppicker", @type = "text", @id = "datepicker" } })
-                </div>
+    <div id="add-new-note-box">
 
-                <div id="add-front-box-2">
+        <div id="information-box"><span>DODAJ NOWE ZLECENIE</span></div>
 
-                    @Html.DropDownListFor(model => model.Rodzaj_Operacji_Id, Model.Operations, "-- wybierz --", new { @class = "rodzaj-operacji enter-data ", @onchange = "choose_operation(this)" })
-
-                </div>
-
-                <div id="add-front-box-3">
-                    @Html.EditorFor(model => model.Miejsce_Operacji, new { htmlAttributes = new { @placeholder = "--- miejsce operacji ---", @class = "miejsce-operacji enter-data" } })
-                </div>
-
-                <div id="add-front-box-4">
-                    @Html.EditorFor(model => model.Klasa_Pojazdu, new { htmlAttributes = new { @placeholder = "--- klasa pojazdu ---", @class = "klasa-pojazdu enter-data " } })
-                </div>
-
-                <div id="add-front-box-5">
-                    @Html.EditorFor(model => model.Godzina_Operacji, new { htmlAttributes = new { @Value = ":", @class = "godzina-operacji enter-data " } })
-                </div>
-            </div>
+        <div id="">@Html.DropDownListFor(model => model.Rodzaj_Operacji_Id, Model.Operations, "wybierz rodzaj zlecenia", new { @class = "rodzaj-operacji", @onchange = "choose_operation(this)" })</div>
 
 
 
-            <div id="add-right-box">
-                <div id="add-back-box-1">
-                    @Html.EditorFor(model => model.Zlecajacy, new { htmlAttributes = new { @placeholder = "--- zlecający ---", @class = "zlecajacy enter-data " } })
-                </div>
+        <ul id="add-new-note-list">
+            <li>
+                @Html.EditorFor(model => model.Data_Operacji, new { htmlAttributes = new { @class = "klasdroppicker data-operacji", @type = "text", @id = "datepicker" } })
+                @Html.EditorFor(model => model.Godzina_Operacji, new { htmlAttributes = new { @class = "godzina-operacji " } })
 
-                <div id="add-back-box-2">
-                    @Html.EditorFor(model => model.Nazwa_Klienta, new { htmlAttributes = new { @placeholder = "--- nazwa klienta ---", @class = "nazwa-klienta enter-data " } })
-                </div>
+            </li>
+            <li>
+                @Html.EditorFor(model => model.Klasa_Pojazdu, new { htmlAttributes = new { @placeholder = " klasa pojazdu ", @class = "klasa-pojazdu " } })
+                @Html.EditorFor(model => model.Samochod, new { htmlAttributes = new { @placeholder = " samochód / rejestracja ", @class = "samochod " } })
 
-                <div id="add-back-box-3">
-                    @Html.EditorFor(model => model.Telefon, new { htmlAttributes = new { @placeholder = "--- telefon ---", @class = "telefon enter-data " } })
-                </div>
-
-                <div id="add-back-box-4">
-                    @Html.EditorFor(model => model.Samochod, new { htmlAttributes = new { @placeholder = "--- samochód / rejestracja ---", @class = "samochod enter-data " } })
-                </div>
-
-                <div id="add-back-box-5">
-                    @Html.TextAreaFor(model => model.Uwagi, new { @placeholder = "--- uwagi ---", @class = "uwagi enter-data " })
-                </div>
-            </div>
-
-        </div>
-        <div id="add-settings-box">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+            </li>
 
 
 
+            <li>
+                @Html.EditorFor(model => model.Miejsce_Operacji, new { htmlAttributes = new { @placeholder = " miejsce operacji ", @class = "miejsce-operacji " } })
 
-        @Scripts.Render("~/bundles/addnewnote")
-    </body>
+            </li>
+            <li>
+                @Html.EditorFor(model => model.Nazwa_Klienta, new { htmlAttributes = new { @placeholder = " nazwa klienta ", @class = "nazwa-klienta " } })
+            </li>
+
+
+
+            <li>
+
+                @Html.EditorFor(model => model.Telefon, new { htmlAttributes = new { @placeholder = " telefon ", @class = "telefon  " } })
+            </li>
+            <li>
+                @Html.EditorFor(model => model.Zlecajacy, new { htmlAttributes = new { @placeholder = " zlecający ", @class = "zlecajacy " } })
+            </li>
+
+
+        </ul>
+
+        <div id="uwagi-box"> @Html.TextAreaFor(model => model.Uwagi, new { @placeholder = " uwagi [max 200 słów]", @class = "uwagi" })</div>
+
+
+        <button id="add-note-btn"><strong>WYŚLIJ</strong></button>
+    </div>
+
+
+    @Scripts.Render("~/bundles/addnewnote")
+
 }

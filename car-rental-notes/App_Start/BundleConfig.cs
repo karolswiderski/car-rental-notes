@@ -37,7 +37,7 @@ namespace car_rental_notes
                 "~/Scripts/myScripts/Board/set-note-layout.js"));
 
             bundles.Add(new StyleBundle("~/bundles/addnewnote").Include(
-                "~/Scripts/myScripts/Board/choose-option-in-addnewnote.js"));
+                "~/Scripts/myScripts/Board/addnewnote-datepicker.js"));
 
             bundles.Add(new StyleBundle("~/bundles/wall").Include(
                 "~/Scripts/myScripts/Wall/show-addannouncemente.js"));

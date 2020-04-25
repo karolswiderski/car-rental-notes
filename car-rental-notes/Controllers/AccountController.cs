@@ -100,7 +100,7 @@ namespace car_rental_notes.Controllers
             {
                 boardList = db.Board.ToArray().Where(x => x.Wykonawca == TempData["UserName"].ToString() && x.Data_Operacji == Convert.ToDateTime(operationData)).Select(x => new BoardVM(x)).ToList();
             }
-
+            boardList = boardList.OrderBy(x => x.Miejsce_Operacji).ToList();
             return PartialView(boardList);
         }
 

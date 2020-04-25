@@ -4,7 +4,7 @@
 
     if (cls == "fas fa-angle-double-down") {
 
-        document.getElementById("add-new-note-content").style.height = "40em";
+        document.getElementById("add-new-note-content").style.height = "auto";
 
         setTimeout(function () {
             document.getElementById("add-main-box").style.display = "block";

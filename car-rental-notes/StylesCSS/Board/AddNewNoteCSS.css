@@ -3,160 +3,215 @@
     height: 100%;
     margin-top: 1%;
     display: none;
-
+    background-color: #1c1d22;
+    font-family: 'Rajdhani', sans-serif;
+    overflow: hidden;
 }
 
 /* ----------------------------------------- CONTENT -->- */
 /*#region CONTENT*/
 
-#add-content-box {
+#add-new-note-box {
     width: 100%;
-    height: 89.6%;
-    background-color: #1c1d22;
-    border-radius: 0 0 1em 1em;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#add-left-box {
-    width: 30%;
-    height: 80%;
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    border-radius: 1em;
-    border: 1px solid #b3b3cc;
-    margin: 2.5% 3.5% 0 0;
-}
-
-#add-right-box {
-    width: 30%;
-    height: 80%;
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    border-radius: 1em;
-    border: 1px solid #b3b3cc;
-    margin: 2.5% 0 0 3.5%;
-}
-
-
-
-#add-front-box-1 {
-    width: 90%;
-    height: 8%;
-    margin: 0% 5%;
-    bottom: 89%;
-    position: absolute;
-}
-
-#add-front-box-2 {
-    width: 80%;
-    margin: 0% 10%;
-    height: 15%;
-    font-size: 200%;
-    bottom: 49%;
-    position: absolute;
-}
-
-#add-front-box-3 {
-    width: 90%;
-    height: 10%;
-    margin: 0% 5%;
-    font-size: 90%;
-    bottom: 34%;
-    position: absolute;
-}
-
-#add-front-box-4 {
-    width: 40%;
-    height: 8%;
-    margin: 0% 30%;
-    font-size: 80%;
-    bottom: 23%;
-    position: absolute;
-}
-
-#add-front-box-5 {
-    width: 20%;
-    height: 12%;
-    font-size: 150%;
-    margin: 0% 40%;
-    bottom: 4%;
-    position: absolute;
-}
-
-#add-back-box-1 {
-    width: 60%;
-    height: 8%;
-    margin: 0 20%;
-    font-size: 80%;
-    bottom: 85%;
-    position: absolute;
-}
-
-#add-back-box-2 {
-    width: 80%;
-    height: 8%;
-    margin: 0 10%;
-    font-size: 100%;
-    bottom: 73%;
-    position: absolute;
-}
-
-#add-back-box-3 {
-    width: 76%;
-    height: 8%;
-    margin: 0 12%;
-    font-size: 100%;
-    bottom: 61%;
-    position: absolute;
-}
-
-#add-back-box-4 {
-    width: 60%;
-    height: 8%;
-    margin: 0 20%;
-    font-size: 80%;
-    bottom: 49%;
-    position: absolute;
-}
-
-#add-back-box-5 {
-    width: 80%;
-    height: 40%;
-    margin: 0 10%;
-    font-size: 90%;
-    bottom: 5%;
-    position: absolute;
-}
-
-.enter-data {
-    width: 80%;
     height: 100%;
-    background-color: #1c1d22;
-    text-align: center;
-    text-align-last: center;
-    border: thin dotted #b3b3cc;
-    border-radius: 0.5em;
-    transition: 0.5s;
-    color: #b3b3cc;
 }
+
+#information-box {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.3em;
+    margin-top: 1%;
+}
+
+#add-new-note-list {
+    list-style: none;
+    overflow: hidden;
+    font-family: 'Rajdhani', sans-serif;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+    #add-new-note-list li {
+        display: inline-flex;
+        position: relative;
+        width: 40%;
+        height: 2em;
+        margin: 2% 0 1% 0;
+        opacity: 0.9;
+    }
+
 
 /*#endregion CONTENT*/
+/* ----------------------------------------- EDITORS -->- */
+/*#region EDITORS*/
+
+.editor-boxes {
+    width: 100%;
+    height: 100%;
+}
+
+.rodzaj-operacji {
+    width: 70%;
+    height: 15%;
+    margin: 1% 15% 1% 15%;
+    font-size: 180%;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-align-last: center;
+}
+
+    .rodzaj-operacji option {
+        padding-left: 0.3em;
+    }
+
+.data-operacji {
+    width: 60%;
+    margin: 0% 3% 0% 0%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.godzina-operacji {
+    width: 30%;
+    margin: 0% 3% 0% 0%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.klasa-pojazdu {
+    width: 30%;
+    margin: 0% 0% 0% 5%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.samochod {
+    width: 60%;
+    margin: 0% 0% 0% 3%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.miejsce-operacji {
+    width: 95%;
+    margin: 0% 5% 0% 0%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.nazwa-klienta {
+    width: 95%;
+    margin: 0% 0% 0% 5%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.telefon {
+    width: 95%;
+    margin: 0% 5% 0% 0%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.zlecajacy {
+    width: 95%;
+    margin: 0% 0% 0% 5%;
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+#uwagi-box {
+    margin-top: 2%;
+    width: 80%;
+    height: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uwagi {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+#add-note-btn {
+    margin-top: 3%;
+    width: 60%;
+    height: 8%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 3%;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: rgba(82, 31, 224, 0.49);
+    color: white;
+    font-size: 130%;
+    padding: 0.5% 0;
+    border: none;
+    letter-spacing: 0.2em;
+}
+
+    #add-note-btn:hover {
+        background-color: rgba(124, 84, 232, 0.71);
+        color: rgba(227, 219, 250, 1);
+        font-size: 150%;
+    }
+
+
+/*#endregion EDITORS*/
 
 
 
 /* ----------------------------------------- SETTINGS ->- */
 /*#region SETTINGS*/
 
-#add-settings-box {
-    width: 100%;
-    height: 10%;
-    margin-top: 0.4%;
-    background-color: #1c1d22;
-    border: 2px solid #1c1d22;
-}
+
 
 /*#endregion SETTINGS*/
 

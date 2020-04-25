@@ -28,6 +28,7 @@
     -o-transition: -o-transform 0.15s linear;
     -webkit-transition: -webkit-transform 0.15s linear;
     background-color: white;
+    
 }
 
     .single-note-box:hover, .single-note-box:focus {
