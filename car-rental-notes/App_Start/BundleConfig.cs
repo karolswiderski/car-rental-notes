@@ -5,7 +5,6 @@ namespace car_rental_notes
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -37,7 +36,7 @@ namespace car_rental_notes
                 "~/Scripts/myScripts/Board/set-note-layout.js"));
 
             bundles.Add(new StyleBundle("~/bundles/addnewnote").Include(
-                "~/Scripts/myScripts/Board/addnewnote-datepicker.js"));
+                "~/Scripts/myScripts/Board/addnewnote-date-and-timepicker.js"));
 
             bundles.Add(new StyleBundle("~/bundles/wall").Include(
                 "~/Scripts/myScripts/Wall/show-addannouncemente.js"));

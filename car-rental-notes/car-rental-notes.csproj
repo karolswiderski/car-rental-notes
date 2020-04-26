@@ -255,6 +255,8 @@
     <Content Include="Scripts\jquery-3.5.0.slim.js" />
     <Content Include="Scripts\jquery-3.5.0.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery-ui.min.css" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -263,7 +265,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\myScripts\Account\myaccount-set-partial.js" />
-    <Content Include="Scripts\myScripts\Board\addnewnote-datepicker.js" />
+    <Content Include="Scripts\myScripts\Board\addnewnote-date-and-timepicker.js" />
     <Content Include="Scripts\myScripts\Board\operations-with-note.js" />
     <Content Include="Scripts\myScripts\Board\operations-with-topToolsBar.js" />
     <Content Include="Scripts\myScripts\Board\set-note-layout.js" />
