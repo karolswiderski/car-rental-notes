@@ -80,6 +80,7 @@ namespace car_rental_notes.Controllers
             if (string.IsNullOrEmpty(userName)) return Redirect("~/Board/Index");
 
             TempData["UserName"] = User.Identity.Name;
+            TempData["Today"] = System.DateTime.Now.Add(new TimeSpan(0, 0, 0, 0)).ToString("dd/MM/yyyy");
             List<BoardVM> boardList;
 
             using (Db db = new Db())
@@ -102,38 +103,6 @@ namespace car_rental_notes.Controllers
             }
             boardList = boardList.OrderBy(x => x.Miejsce_Operacji).ToList();
             return PartialView(boardList);
-        }
-
-
-        [HttpGet]
-        public ActionResult MyAccountDetailsPartial()
-        {
-            string userName = User.Identity.Name;
-            UsersVM model;
-
-            using (Db db = new Db())
-            {
-                UsersDTO dto = db.Users.FirstOrDefault(x => x.Login == userName);
-                model = new UsersVM(dto);
-            }
-
-            return PartialView(model);
-        }
-
-
-        [HttpGet]
-        public ActionResult EditAccountPartial()
-        {
-            string userName = User.Identity.Name;
-            UsersVM model;
-
-            using (Db db = new Db())
-            {
-                UsersDTO dto = db.Users.FirstOrDefault(x => x.Login == userName);
-                model = new UsersVM(dto);
-            }
-
-            return PartialView(model);
         }
     }
 }

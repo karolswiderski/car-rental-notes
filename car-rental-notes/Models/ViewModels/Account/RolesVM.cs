@@ -1,8 +1,4 @@
 ﻿using car_rental_notes.Models.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace car_rental_notes.Models.ViewModels.Account
 {

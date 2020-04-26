@@ -14,14 +14,14 @@ a:active {
 }
 
 #myaccount-top-tools-box-1 {
-    background-color: #6b5b95;
-    color: white;
     border-right: 0.2em solid #2a2b30;
     width: 25%;
 }
 
 #myaccount-top-tools-box-2 {
     width: 50%;
+    background-color: #6b5b95;
+    color: white;
 }
 
 span {
@@ -41,7 +41,7 @@ span {
 /* ------------------------------------- PAGE CONTENT ->- */
 /*#region PAGE_CONTENT*/
 
-#myOperations-partial, #myAccountDetails-partial, #EditAccount-partial {
+#myOperations-history-partial, #myOperations-today-partial, #myOperations-future-partial {
     width: 80%;
     height: auto;
     margin-left: auto;
@@ -50,7 +50,9 @@ span {
     display: none;
 }
 
-#myOperations-partial { display: block; }
+#myOperations-today-partial {
+    display: block;
+}
 
 /*#endregion PAGE_CONTENT*/
 
@@ -61,11 +63,14 @@ span {
 #myOperations-content {
     width: 100%;
     height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.2em;
 }
 
 .myOperations-date-box {
-    width: 15em;
+    width: 100%;
     height: 3em;
+    margin-top: 1.5em;
 }
 
     .myOperations-date-box span {
@@ -79,8 +84,14 @@ span {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     border-bottom: 1px dotted rgba(195, 187, 182, 0.58);
+}
+
+#today-box {
+    width: auto;
+    height: auto;
+    border: 1px dashed rgba(195, 187, 182, 0.58);
 }
 
 /*#endregion OPERATIONS_PARTIAL*/

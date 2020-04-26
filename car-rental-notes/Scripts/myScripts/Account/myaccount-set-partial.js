@@ -1,25 +1,25 @@
-﻿var btn1 = true;
-var btn2 = false;
+﻿var btn1 = false;
+var btn2 = true;
 var btn3 = false;
 
 // -- Operacja zmiany wyświetlanego partiala (obsługa css):
 
 $("#myaccount-top-tools-box-1").click(function () {
-    change_partial("myOperations-partial", 1,
-        "myAccountDetails-partial", 2,
-        "EditAccount-partial", 3);
+    change_partial("myOperations-history-partial", 1,
+        "myOperations-today-partial", 2,
+        "myOperations-future-partial", 3);
 });
 
 $("#myaccount-top-tools-box-2").click(function () {
-    change_partial("myAccountDetails-partial", 2,
-        "myOperations-partial", 1,
-        "EditAccount-partial", 3);
+    change_partial("myOperations-today-partial", 2,
+        "myOperations-history-partial", 1,
+        "myOperations-future-partial", 3);
 });
 
 $("#myaccount-top-tools-box-3").click(function () {
-    change_partial("EditAccount-partial", 3,
-        "myOperations-partial", 1,
-        "myAccountDetails-partial", 2);
+    change_partial("myOperations-future-partial", 3,
+        "myOperations-history-partial", 1,
+        "myOperations-today-partial", 2);
 });
 
 

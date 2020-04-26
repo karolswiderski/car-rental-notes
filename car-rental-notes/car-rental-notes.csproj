@@ -245,10 +245,6 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="AdminArea\Views\Web.config" />
-    <Content Include="AdminArea\Views\_ViewStart.cshtml" />
-    <Content Include="AdminArea\Views\Shared\_Layout.cshtml" />
-    <Content Include="AdminArea\Views\Shared\Error.cshtml" />
     <None Include="Scripts\jquery-3.5.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.0.js" />
     <Content Include="Scripts\jquery-3.5.0.min.js" />
@@ -345,6 +341,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="StylesCSS\Account\EditAccountCSS.css" />
     <Content Include="StylesCSS\Account\LoginCSS.css" />
     <Content Include="StylesCSS\Account\MyAccountCSS.css" />
     <Content Include="StylesCSS\Board\AddNewNoteCSS.css" />
@@ -377,8 +374,6 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Account\MyAccount.cshtml" />
     <Content Include="Views\Account\MyOperationsPartial.cshtml" />
-    <Content Include="Views\Account\MyAccountDetailsPartial.cshtml" />
-    <Content Include="Views\Account\EditAccountPartial.cshtml" />
     <Content Include="Views\Wall\Index.cshtml" />
     <Content Include="Views\Wall\AddAnnouncement.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -394,10 +389,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdminArea\Controllers\" />
-    <Folder Include="AdminArea\Models\ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

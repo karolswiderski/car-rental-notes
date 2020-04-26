@@ -1,5 +1,4 @@
 ﻿using car_rental_notes.Models.Data;
-using System.ComponentModel.DataAnnotations;
 
 namespace car_rental_notes.Views.Account
 {
