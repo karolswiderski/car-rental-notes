@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-#ann-top-tools-box-2 {
+#ann-top-tools-box-2 { 
     width: 80%;
     font-size: 150%;
 }
@@ -114,11 +114,11 @@
     width: 100%;
     height: auto;
     padding: 2%;
-    border: 1px dotted rgba(195, 187, 182, 0.58);
     border-radius: 5px;
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 5%;
+    background-color: rgba(204, 251, 255, 1);
 }
 /*#endregion ANN*/
 

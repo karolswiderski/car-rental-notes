@@ -1,6 +1,12 @@
 ﻿/* --------------------------------------- NOTE ------->- */
 /*#region NOTE*/
 
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
 #table {
     list-style: none;
     overflow: hidden;
@@ -145,10 +151,10 @@
     text-align: center;
 }
 
-.add-option-img:hover, .edit-option-img:hover, .delete-option-img:hover {
-    font-size: 90%;
-    color: #6B5B95;
-}
+    .add-option-img:hover, .edit-option-img:hover, .delete-option-img:hover {
+        font-size: 90%;
+        color: #6B5B95;
+    }
 
 /* content */
 

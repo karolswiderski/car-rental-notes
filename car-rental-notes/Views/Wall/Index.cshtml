@@ -17,13 +17,16 @@
     <div id="ann-top-tools-box-3"><i class="fas fa-plus be-center" id="add-new-ann-btn"></i></div>
 }
 
+
+    <title>Zaloguj się</title>
+
 <div id="anns">
     <ul id="ann-table">
 
         @if (User.Identity.IsAuthenticated)
         {
             <li>
-                <div class="ann-daily-info">Cześć @User.Identity.Name! Dzisiaj mamy 3 zaplanowane zlecenia, 1 z nich jest przypisane Tobie.</div>
+                <div class="ann-daily-info"><strong>Cześć @User.Identity.Name! Dzisiaj mamy @TempData["Today"] zaplanowane zlecenie/a, @TempData["YourOp"] z nich jest/są przypisane Tobie.</strong></div>
             </li>
         }
 

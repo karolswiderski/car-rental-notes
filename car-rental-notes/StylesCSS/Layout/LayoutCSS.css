@@ -123,6 +123,7 @@ a:active {
     color: #b3b3cc;
     display: flex;
     border-radius: 0 2em 2em 0;
+    position: fixed;
 }
 
 #content-box {

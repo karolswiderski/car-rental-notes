@@ -16,7 +16,7 @@ namespace car_rental_notes
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Board", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Wall", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

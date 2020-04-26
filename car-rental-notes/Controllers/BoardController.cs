@@ -81,6 +81,12 @@ namespace car_rental_notes.Controllers
         [HttpPost]
         public ActionResult AddNewNote(BoardVM boardVM)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(boardVM);
+            }
+           
+           
 
             using (Db db = new Db())
             {

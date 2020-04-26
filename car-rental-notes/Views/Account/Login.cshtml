@@ -2,6 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
 @{
     Layout = null;
+     
 }
 <link href="~/StylesCSS/Account/LoginCSS.css" rel="stylesheet" />
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
         @using (Html.BeginForm())
         {
             @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @placeholder = " nazwa użytkownika", @class = "login-editor editor" } })
-            @Html.EditorFor(model => model.Haslo, new { htmlAttributes = new { @placeholder = " hasło", @class = "haslo-editor editor" } })
+            @Html.PasswordFor(model => model.Haslo, new { @class = "haslo-editor editor"  })
             <label class="remember-me">Zapamiętaj mnie: </label>
             @Html.EditorFor(model => model.ZapamietajMnie, new { htmlAttributes = new { @class = "form-check-input check-editor" } })
                 

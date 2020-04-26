@@ -24,7 +24,7 @@ namespace car_rental_notes.Controllers
         public ActionResult Login()
         {
             string userName = User.Identity.Name;
-            if (!string.IsNullOrEmpty(userName)) return Redirect("~/Board/Index");
+            if (!string.IsNullOrEmpty(userName)) return Redirect("~/Wall/Index");
 
             return View();
         }

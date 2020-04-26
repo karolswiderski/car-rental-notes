@@ -12,11 +12,17 @@ namespace car_rental_notes.Controllers
         // GET: Wall
         public ActionResult Index()
         {
+            string userName = User.Identity.Name;
+            DateTime today = Convert.ToDateTime(System.DateTime.Now.Add(new TimeSpan(0, 0, 0, 0)).ToString("dd/MM/yyyy"));
             List<AnnouncementsVM> AnnouncementsList;
+
             using (Db db = new Db())
             {
                 AnnouncementsList = db.Announcements.ToArray().Select(x => new AnnouncementsVM(x)).ToList();
+                TempData["Today"] = db.Board.Where(x => x.Data_Operacji == today).Count();
+                TempData["YourOp"] = db.Board.Where(x => x.Data_Operacji == today && x.Wykonawca == userName).Count();
             }
+
 
             return View(AnnouncementsList);
         }

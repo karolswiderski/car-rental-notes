@@ -9,7 +9,9 @@ namespace car_rental_notes.Models.Data
     {
         [Key]
         public int Board_Id { get; set; }
+        [Required]
         public string Rodzaj_Operacji { get; set; }
+        [Required]
         public int Rodzaj_Operacji_Id { get; set; }
         public string Miejsce_Operacji { get; set; }
         public string Zlecajacy { get; set; }
