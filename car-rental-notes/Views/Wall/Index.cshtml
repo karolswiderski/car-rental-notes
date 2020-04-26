@@ -6,6 +6,7 @@
 
 }
 
+<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
 @Scripts.Render("~/bundles/jquery")
 <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
 <script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
@@ -36,12 +37,16 @@
         {
             <li>
                 <div class="ann-main-box">
-                    <div class="ann-subject"><b>@item.Temat</b></div>
+                    <div class="ann-subject">
+                        <b>@item.Temat</b>
+                        <a href="/Wall/DeleteAnnouncement/@item.Announcement_Id">[ usuń ogłoszenie ]</a>
+                    </div>
                     <div class="ann-content">@item.Tresc</div>
                     <div class="ann-author">utworzono <i>@item.Data.Date.ToString("dd.MM.yyyy")</i> przez <i>@item.Autor</i></div>
+                    
                 </div>
             </li>
-
+           
         }
     </ul>
 </div>

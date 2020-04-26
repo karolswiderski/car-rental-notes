@@ -51,5 +51,20 @@ namespace car_rental_notes.Controllers
 
             return RedirectToAction("Index");
         }
+
+        // GET: Wall/DeleteAnnouncement
+        [HttpGet]
+        public ActionResult DeleteAnnouncement(int id)
+        {
+
+            using (Db db = new Db())
+            {
+                AnnouncementsDTO dto = db.Announcements.Find(id);
+                db.Announcements.Remove(dto);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

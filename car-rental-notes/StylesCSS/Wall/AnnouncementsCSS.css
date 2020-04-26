@@ -44,19 +44,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 #ann-table {
     list-style: none;
     overflow: hidden;
-    font-family: "Raleway", sans-serif;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     font-size: 16px;
     position: relative;
-    color: white;
 }
 
     #ann-table li {
@@ -67,13 +66,30 @@
 
 
 .ann-main-box {
-    width: 100%;
+    width: 80%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2%;
-    border: 1px dotted rgba(195, 187, 182, 0.58);
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 204, 1);
+    color: black;
+    -moz-transition: -moz-transform 0.15s linear;
+    -o-transition: -o-transform 0.15s linear;
+    -webkit-transition: -webkit-transform 0.15s linear;
 }
+
+    .ann-main-box:hover, .ann-main-box:focus {
+        box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        position: relative;
+        z-index: 3;
+    }
 
 .ann-subject {
     font-size: 200%;
@@ -104,7 +120,6 @@
     text-align: center;
     margin-bottom: 5%;
 }
-
 /*#endregion ANN*/
 
 
@@ -113,32 +128,79 @@
 
 #add-new-ann {
     padding: 2%;
-    border: 1px dotted rgba(195, 187, 182, 0.58);
     border-radius: 5px;
     box-sizing: border-box;
     display: none;
 }
 
-.add-ann-subject {
-    font-size: 200%;
-    border-bottom: 1px dotted rgba(195, 187, 182, 0.58);
-    margin: 0 0 3% 0;
-    padding: 0 0 2% 0;
-    overflow: hidden;
-}
-
-.add-ann-content {
-    font-size: 125%;
-    overflow: auto;
+#add-new-ann-main {
     width: 100%;
-    height: 25%;
+    height: 100%;
+    margin-top: 1%;
+    background-color: rgba(239, 239, 179, 1);
+    overflow: hidden;
+    font-family: 'Rajdhani', sans-serif;
+    border-radius: 1em;
 }
 
-.text-infomation {
-    min-width: 100%;
-    margin-bottom: 2%;
-    font-size: 125%;
+#add-new-ann-box {
+    width: 100%;
+    height: 100%;
 }
+
+#information-box {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 200%;
+    letter-spacing: 0.3em;
+    margin-top: 1%;
+}
+
+.editors {
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    font-style: initial;
+    color: black;
+}
+
+.box {
+    margin-top: 2%;
+    width: 80%;
+    height: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.temat, .uwagi {
+    width: 100%;
+    opacity: 0.8;
+    padding-top: 5px;
+   border-radius: 0.3em;
+}
+
+#add-ann-btn {
+    margin: 3% 20%;
+    width: 60%;
+    height: 8%;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: rgba(38, 38, 8, 1);
+    color: white;
+    font-size: 120%;
+    padding: 0.5% 0;
+    border: none;
+    letter-spacing: 0.2em;
+    border-radius: 0.3em;
+}
+
+    #add-ann-btn:hover {
+        background-color: rgba(38, 38, 8, 0.67);
+        color: white;
+    }
+
+
 
 /*#endregion ADD_NEW_ANN*/
 
