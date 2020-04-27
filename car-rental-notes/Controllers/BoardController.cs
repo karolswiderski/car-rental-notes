@@ -28,8 +28,10 @@ namespace car_rental_notes.Controllers
             using (Db db = new Db())
             {
                 boardList = db.Board.ToArray().Select(x => new BoardVM(x)).ToList();
+                TempData["Counter"] = boardList.Where(x => x.Data_Operacji == Convert.ToDateTime(TempData["SelectedDate"])).Count();
             }
 
+            
             return View(boardList);
         }
 

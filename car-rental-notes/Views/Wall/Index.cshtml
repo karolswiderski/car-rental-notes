@@ -1,55 +1,64 @@
 ﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Wall.AnnouncementsVM>
+@if (Request.IsAuthenticated)
+{
+    {
+        ViewBag.Title = "Ogłoszenia";
+        Layout = "~/Views/Shared/_Layout.cshtml";
 
-@{
-    ViewBag.Title = "Ogłoszenia";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 
-}
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
+    @Scripts.Render("~/bundles/jquery")
+    <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
+    <script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
-@Scripts.Render("~/bundles/jquery")
-<link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
-<script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
-
-@section top_tools_bar{
-    <div id="ann-top-tools-box-1"></div>
-    <div id="ann-top-tools-box-2"><span class="be-center">OGŁOSZENIA</span></div>
-    <div id="ann-top-tools-box-3"><i class="fas fa-plus be-center" id="add-new-ann-btn"></i></div>
-}
+    @section top_tools_bar{
+        <div id="ann-top-tools-box-1"></div>
+        <div id="ann-top-tools-box-2"><span class="be-center">OGŁOSZENIA</span></div>
+        <div id="ann-top-tools-box-3"><i class="fas fa-plus be-center" id="add-new-ann-btn"></i></div>
+    }
 
 
     <title>Zaloguj się</title>
 
-<div id="anns">
-    <ul id="ann-table">
+    <div id="anns">
+        <ul id="ann-table">
 
-        @if (User.Identity.IsAuthenticated)
-        {
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li>
+                    <div class="ann-daily-info"><strong>Cześć @User.Identity.Name! Dzisiaj mamy @TempData["Today"] zaplanowane zlecenie/a, @TempData["YourOp"] z nich jest/są przypisane Tobie.</strong></div>
+                </li>
+            }
+
             <li>
-                <div class="ann-daily-info"><strong>Cześć @User.Identity.Name! Dzisiaj mamy @TempData["Today"] zaplanowane zlecenie/a, @TempData["YourOp"] z nich jest/są przypisane Tobie.</strong></div>
-            </li>
-        }
-
-        <li>
-            <div id="add-new-ann">
-                @Html.Action("AddAnnouncement", "Wall", new { area = "" })
-            </div>
-        </li>
-
-        @foreach (var item in Model.Reverse())
-        {
-            <li>
-                <div class="ann-main-box">
-                    <div class="ann-subject">
-                        <b>@item.Temat</b>
-                        <a href="/Wall/DeleteAnnouncement/@item.Announcement_Id">[ usuń ogłoszenie ]</a>
-                    </div>
-                    <div class="ann-content">@item.Tresc</div>
-                    <div class="ann-author">utworzono <i>@item.Data.Date.ToString("dd.MM.yyyy")</i> przez <i>@item.Autor</i></div>
-                    
+                <div id="add-new-ann">
+                    @Html.Action("AddAnnouncement", "Wall", new { area = "" })
                 </div>
             </li>
-           
-        }
-    </ul>
-</div>
+
+            @foreach (var item in Model.Reverse())
+            {
+                <li>
+                    <div class="ann-main-box">
+                        <div class="ann-subject">
+                            <b>@item.Temat</b>
+                            <a href="/Wall/DeleteAnnouncement/@item.Announcement_Id">[ usuń ogłoszenie ]</a>
+                        </div>
+                        <div class="ann-content">@item.Tresc</div>
+                        <div class="ann-author">utworzono <i>@item.Data.Date.ToString("dd.MM.yyyy")</i> przez <i>@item.Autor</i></div>
+
+                    </div>
+                </li>
+
+            }
+        </ul>
+    </div>
+}
+else
+{
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
+         $(function(){ window.location.href = "@Url.Action("Login","Account")";});
+    </script>
+}

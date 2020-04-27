@@ -1,15 +1,25 @@
 ﻿@model car_rental_notes.Models.ViewModels.Wall.AnnouncementsVM
-<link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
-
-@using (@Html.BeginForm("AddAnnouncement", "Wall", FormMethod.Post, htmlAttributes: new { @id = "add-new-ann-main" }))
+@if (Request.IsAuthenticated)
 {
-<div id="add-new-ann-box">
-    <div id="information-box"><span>DODAJ NOWE ZLECENIE</span></div>
+    <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
 
-    <div class="box"> @Html.EditorFor(model => model.Temat, new { htmlAttributes = new { @placeholder = " temat ", @class = "temat editors" } })</div>
-    <div class="box"> @Html.TextAreaFor(model => model.Tresc, new { @placeholder = " uwagi [max 200 słów]", @class = "uwagi editors" })</div>
+    using (@Html.BeginForm("AddAnnouncement", "Wall", FormMethod.Post, htmlAttributes: new { @id = "add-new-ann-main" }))
+    {
+        <div id="add-new-ann-box">
+            <div id="information-box"><span>DODAJ NOWE ZLECENIE</span></div>
 
-    <button id="add-ann-btn"><strong>WYŚLIJ</strong></button>
-</div>
+            <div class="box"> @Html.EditorFor(model => model.Temat, new { htmlAttributes = new { @placeholder = " temat ", @class = "temat editors" } })</div>
+            <div class="box"> @Html.TextAreaFor(model => model.Tresc, new { @placeholder = " uwagi [max 200 słów]", @class = "uwagi editors" })</div>
 
+            <button id="add-ann-btn"><strong>WYŚLIJ</strong></button>
+        </div>
+
+    }
+}
+else
+{
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
+         $(function(){ window.location.href = "@Url.Action("Login","Account")";});
+    </script>
 }

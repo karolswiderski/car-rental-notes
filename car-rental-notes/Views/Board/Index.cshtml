@@ -1,87 +1,96 @@
 ﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Board.BoardVM>
+@if (Request.IsAuthenticated)
+{
+    <link href="~/StylesCSS/Board/IndexCSS.css" rel="stylesheet" />
+    {
+        ViewBag.Title = "Tablica";
+        Layout = "~/Views/Shared/_Layout.cshtml";
 
-<link href="~/StylesCSS/Board/IndexCSS.css" rel="stylesheet" />
-@{
-    ViewBag.Title = "Tablica";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-
-}
- <link rel="shortcut icon" href="">
-
-<body>
-
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/board_index")
-
-    <div id="board-top-bar"></div>
-
-    @section top_tools_bar{
-        <div id="top-tools-box-1"> <span>0</span> </div>
-        <div id="top-tools-box-2"> <a class="fas fa-angle-left"></a> </div>
-        <div id="top-tools-box-3"> <span>@TempData["SelectedDate"]</span> </div>
-        <div id="top-tools-box-4"> <a class="fas fa-angle-right"></a> </div>
-        <div id="top-tools-box-5"> <i class="fas fa-angle-double-down" id="btn-addnewnote"></i> </div>
     }
+    <link rel="shortcut icon" href="">
 
-    <div id="add-new-note-content">
-        @Html.Action("AddNewNote", "Board", new { area = "" })
-    </div>
+    <body>
 
-    <ul id="table">
-        @foreach (var item in Model)
-        {
-            if (item.Data_Operacji.ToString("dd/MM/yyyy") == @TempData["SelectedDate"].ToString())
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/board_index")
+
+        <div id="board-top-bar"></div>
+
+        @section top_tools_bar{
+            <div id="top-tools-box-1"> <span>@TempData["Counter"]</span> </div>
+            <div id="top-tools-box-2"> <a class="fas fa-angle-left"></a> </div>
+            <div id="top-tools-box-3"> <span>@TempData["SelectedDate"]</span> </div>
+            <div id="top-tools-box-4"> <a class="fas fa-angle-right"></a> </div>
+            <div id="top-tools-box-5"> <i class="fas fa-angle-double-down" id="btn-addnewnote"></i> </div>
+        }
+
+        <div id="add-new-note-content">
+            @Html.Action("AddNewNote", "Board", new { area = "" })
+        </div>
+
+        <ul id="table">
+            @foreach (var item in Model)
             {
-            <li onload="">
+                if (item.Data_Operacji.ToString("dd/MM/yyyy") == @TempData["SelectedDate"].ToString())
+                {
+                    <li onload="">
 
-                <div class="single-note-box" id="@item.Board_Id" accesskey="9" onload="single-note-transform()">
-                    <div class="front-note-side">
+                        <div class="single-note-box" id="@item.Board_Id" accesskey="9" onload="single-note-transform()">
+                            <div class="front-note-side">
 
-                        <div class="front-box-1">wykonuje: @item.Wykonawca</div>
+                                <div class="front-box-1">wykonuje: @item.Wykonawca</div>
 
-                        <div class="front-box-2">@item.Rodzaj_Operacji</div>
+                                <div class="front-box-2">@item.Rodzaj_Operacji</div>
 
-                        <div class="front-box-3">@item.Miejsce_Operacji</div>
+                                <div class="front-box-3">@item.Miejsce_Operacji</div>
 
-                        <div class="front-box-4">klasa @item.Klasa_Pojazdu</div>
+                                <div class="front-box-4">klasa @item.Klasa_Pojazdu</div>
 
-                        <div class="front-box-5">@item.Godzina_Operacji.ToString("hh':'mm")</div>
+                                <div class="front-box-5">@item.Godzina_Operacji.ToString("hh':'mm")</div>
 
-                    </div>
-                    <div class="back-note-side">
-                        <div class="back-side-menu" onmouseover="show_back_menu(this)" onmouseout="hide_back_menu(this)">
-                            <div class="add-btn-box"><i class="fas fa-plus add-option-img"></i></div>
-                            <div class="edit-btn-box"></div>
-                            <div class="space-for-new-btn"></div>
-                            <div class="delete-btn-box"><a class="fas fa-times delete-option-img" href="/Board/DeleteNote/@item.Board_Id"></a></div>
+                            </div>
+                            <div class="back-note-side">
+                                <div class="back-side-menu" onmouseover="show_back_menu(this)" onmouseout="hide_back_menu(this)">
+                                    <div class="add-btn-box"><i class="fas fa-plus add-option-img"></i></div>
+                                    <div class="edit-btn-box"></div>
+                                    <div class="space-for-new-btn"></div>
+                                    <div class="delete-btn-box"><a class="fas fa-times delete-option-img" href="/Board/DeleteNote/@item.Board_Id"></a></div>
+                                </div>
+
+                                <div class="back-side-content">
+
+                                    <div class="back-box-1">@item.Zlecajacy</div>
+
+                                    <div class="back-box-2">@item.Nazwa_Klienta</div>
+
+                                    <div class="back-box-3">@item.Telefon</div>
+
+                                    <div class="back-box-4"> @item.Samochod</div>
+
+                                    <div class="back-box-5"> @item.Uwagi</div>
+
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="back-side-content">
-
-                            <div class="back-box-1">@item.Zlecajacy</div>
-
-                            <div class="back-box-2">@item.Nazwa_Klienta</div>
-
-                            <div class="back-box-3">@item.Telefon</div>
-
-                            <div class="back-box-4"> @item.Samochod</div>
-
-                            <div class="back-box-5"> @item.Uwagi</div>
-
-                        </div>
-                    </div>
-                </div>
-                <script>
+                        <script>
 
                     set_note_layout('@item.Rodzaj_Operacji',@item.Board_Id);
-                </script>
-            </li>
+                        </script>
+                    </li>
+                }
             }
-        }
-        <li></li>
-    </ul>
+            <li></li>
+        </ul>
 
 
         @Scripts.Render("~/bundles/board_index")
-</body>
+    </body>
+}
+else
+{
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
+         $(function(){ window.location.href = "@Url.Action("Login","Account")";});
+    </script>
+}
