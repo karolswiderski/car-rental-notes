@@ -216,21 +216,6 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <None Include="Scripts\jquery-3.5.0.intellisense.js" />
-    <Content Include="Scripts\jquery-3.5.0.js" />
-    <Content Include="Scripts\jquery-3.5.0.min.js" />
-    <Content Include="Scripts\jquery-3.5.0.slim.js" />
-    <Content Include="Scripts\jquery-3.5.0.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui.css" />
-    <Content Include="Scripts\jquery-ui.js" />
-    <Content Include="Scripts\jquery-ui.min.css" />
-    <Content Include="Scripts\jquery-ui.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\myScripts\Account\myaccount-set-partial.js" />
     <Content Include="Scripts\myScripts\Board\addnewnote-date-and-timepicker.js" />
     <Content Include="Scripts\myScripts\Board\operations-with-note.js" />
@@ -240,7 +225,6 @@
     <Content Include="Scripts\myScripts\Layout\left-menu.js" />
     <Content Include="Scripts\myScripts\Layout\set-display.js" />
     <Content Include="Scripts\myScripts\Wall\show-addannouncement.js" />
-    <Content Include="Scripts\popper-utils.miny.js" />
     <Content Include="StylesCSS\Account\EditAccountCSS.css" />
     <Content Include="StylesCSS\Account\LoginCSS.css" />
     <Content Include="StylesCSS\Account\MyAccountCSS.css" />
@@ -261,7 +245,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Board\Index.cshtml" />
     <Content Include="Views\Board\AddNewNote.cshtml" />
-    <Content Include="Scripts\popper-utils.min.js .map" />
     <Content Include="Views\Account\MyAccount.cshtml" />
     <Content Include="Views\Account\MyOperationsPartial.cshtml" />
     <Content Include="Views\Wall\Index.cshtml" />
@@ -270,8 +253,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.5.0.slim.min.map" />
-    <Content Include="Scripts\jquery-3.5.0.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

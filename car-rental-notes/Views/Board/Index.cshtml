@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Board.BoardVM>
 @if (Request.IsAuthenticated)
 {
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
     <link href="~/StylesCSS/Board/IndexCSS.css" rel="stylesheet" />
     {
         ViewBag.Title = "Tablica";
