@@ -11,6 +11,7 @@ function mobile() {
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(1)");
 
             document.getElementById("top-tools-bar").style.display = "none";
+            document.getElementById("mobile-top-tools-bar").style.display = "block";
 
             console.log("Mobile");
         }

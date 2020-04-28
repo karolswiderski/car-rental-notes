@@ -60,3 +60,32 @@
     .btn-login:hover {
         background-color: rgba(0, 0, 0, 0.60);
     }
+
+
+/* --------------------------------------- MEDIA ------->- */
+/*#region MEDIA*/
+
+@media screen and (max-width: 575) {
+
+    #login-form-box {
+        width: 25em;
+        height: 10em;
+    }
+
+}
+
+@media (max-width: 991px) and (min-width: 575px) {
+    #login-form-box {
+        width: 30em;
+        height: 15em;
+    }
+}
+
+@media (min-width: 992px) {
+    #login-form-box {
+        width: 35em;
+        height: 20em;
+    }
+}
+
+/*#endregion MEDIA*/

@@ -37,14 +37,7 @@
     flex-wrap: wrap;
 }
 
-    #add-new-note-list li {
-        display: inline-flex;
-        position: relative;
-        width: 40%;
-        height: 2em;
-        margin: 2% 0 1% 0;
-        opacity: 0.9;
-    }
+
 
 
 /*#endregion CONTENT*/
@@ -56,20 +49,10 @@
     height: 100%;
 }
 
-.editors {
-    height: 100%;
-    font-family: 'Rajdhani', sans-serif;
-    text-align: center;
-    font-size: 120%;
-    font-style: initial;
-    color: black;
-}
-
 .rodzaj-operacji {
     width: 70%;
     height: 15%;
     margin: 1% 15% 1% 15%;
-    font-size: 180%;
     font-family: 'Rajdhani', sans-serif;
     letter-spacing: 0.2em;
     text-align: center;
@@ -80,51 +63,10 @@
         padding-left: 0.3em;
     }
 
-.data-operacji {
-    width: 60%;
-    margin-right: 3%;
-    transition: 0.5s;
-}
-
-.godzina-operacji {
-    width: 30%;
-    margin-right: 3%;
-}
-
-.klasa-pojazdu {
-    width: 30%;
-    margin-left: 5%;
-}
-
-.samochod {
-    width: 60%;
-    margin-left: 3%;
-}
-
-.miejsce-operacji {
-    width: 95%;
-    margin-right: 5%;
-}
-
-.nazwa-klienta {
-    width: 95%;
-    margin-left: 5%;
-}
-
-.telefon {
-    width: 95%;
-    margin-right: 5%;
-}
-
-.zlecajacy {
-    width: 95%;
-    margin-left: 5%;
-}
 
 #uwagi-box {
     margin-top: 2%;
     width: 80%;
-    height: 15%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -157,7 +99,136 @@
 
 /*#endregion EDITORS*/
 
+/* ------------------------------------ MEDIA SECTION ->- */
+/*#region MEDIA_SECTION*/
 
+@media screen and (max-width: 575) {
+
+    #add-new-note-list li {
+        width: 100%;
+        height: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .rodzaj-operacji {
+        font-size: 100%;
+    }
+
+    .editors {
+        height: 100%;
+        font-family: 'Rajdhani', sans-serif;
+        text-align: center;
+        font-size: 120%;
+        font-style: initial;
+        color: black;
+    }
+
+    .data-operacji {
+    }
+
+    .godzina-operacji {
+    }
+
+    .klasa-pojazdu {
+    }
+
+    .samochod {
+    }
+
+    .miejsce-operacji {
+    }
+
+    .nazwa-klienta {
+    }
+
+    .telefon {
+    }
+
+    .zlecajacy {
+    }
+
+    #uwagi-box {
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 575px) {
+    #add-new-note-list li {
+        display: inline-flex;
+        position: relative;
+        width: 40%;
+        height: 2em;
+        margin: 2% 0 1% 0;
+        opacity: 0.9;
+    }
+
+    .rodzaj-operacji {
+        font-size: 180%;
+    }
+
+    .editors {
+        height: 100%;
+        font-family: 'Rajdhani', sans-serif;
+        text-align: center;
+        font-size: 120%;
+        font-style: initial;
+        color: black;
+    }
+
+    .data-operacji {
+        width: 60%;
+        margin-right: 3%;
+        transition: 0.5s;
+    }
+
+    .godzina-operacji {
+        width: 30%;
+        margin-right: 3%;
+    }
+
+    .klasa-pojazdu {
+        width: 30%;
+        margin-left: 5%;
+    }
+
+    .samochod {
+        width: 60%;
+        margin-left: 3%;
+    }
+
+    .miejsce-operacji {
+        width: 95%;
+        margin-right: 5%;
+    }
+
+    .nazwa-klienta {
+        width: 95%;
+        margin-left: 5%;
+    }
+
+    .telefon {
+        width: 95%;
+        margin-right: 5%;
+    }
+
+    .zlecajacy {
+        width: 95%;
+        margin-left: 5%;
+    }
+
+    #uwagi-box {
+        height: 15%;
+    }
+}
+
+/*#endregion MEDIA_SECTION*/
 
 
 

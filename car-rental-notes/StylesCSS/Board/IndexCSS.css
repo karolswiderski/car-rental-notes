@@ -228,9 +228,32 @@ a:active {
 /*#endregion TOP_TOOLS_BAR_SECTION*/
 
 
+/* --------------------- MOBILE TOP TOOLS BAR SECTION ->- */
+/*#region MOBILE_TOP_TOOLS_BAR_SECTION*/
+
+#mobile-top-tools-box-1, #mobile-top-tools-box-2, #mobile-top-tools-box-4, #mobile-top-tools-box-5 {
+    width: 15%;
+}
+
+#mobile-top-tools-box-3 {
+    width: 40%;
+}
+
+#mobile-top-tools-box-1, #mobile-top-tools-box-3 {
+    font-size: 3vh;
+}
+
+.mobile-top {
+    float: left;
+    height: 100%;
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+
+/*#endregion MOBILE_TOP_TOOLS_BAR_SECTION*/
 /* ------------------------------------- ADD NEW NOTE ->- */
 /*#region ADD_NEW_NOTE*/
-
 #add-new-note-content {
     width: 80%;
     height: 0%;
@@ -252,6 +275,14 @@ a:active {
 /* ------------------------------------ MEDIA SECTION ->- */
 /*#region MEDIA_SECTION*/
 
+@media screen and (max-width: 575) {
+   
+}
 
+@media (max-width: 991px) and (min-width: 575px) {
+}
+
+@media (min-width: 992px) {
+}
 
 /*#endregion MEDIA_SECTION*/

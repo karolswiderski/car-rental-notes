@@ -1,6 +1,13 @@
 ﻿$("#top-tools-box-5").click(function () {
+    show("#btn-addnewnote");
+});
 
-    var cls = jQuery("#btn-addnewnote").attr("class");
+$("#mobile-top-tools-box-5").click(function () {
+    show("#mobile-btn-addnewnote");
+});
+
+function show(varOne) {
+    var cls = jQuery(varOne).attr("class");
 
     if (cls == "fas fa-angle-double-down") {
 
@@ -12,8 +19,8 @@
         }, 50);
 
         setTimeout(function () {
-            $("#btn-addnewnote").removeClass("fa-angle-double-down");
-            $("#btn-addnewnote").addClass("fa-angle-double-up");
+            $(varOne).removeClass("fa-angle-double-down");
+            $(varOne).addClass("fa-angle-double-up");
         }, 250);
 
     } else {
@@ -26,10 +33,9 @@
         document.getElementById("add-new-note-content").style.height = "0em";
 
         setTimeout(function () {
-            $("#btn-addnewnote").removeClass("fa-angle-double-up");
-            $("#btn-addnewnote").addClass("fa-angle-double-down");
+            $(varOne).removeClass("fa-angle-double-up");
+            $(varOne).addClass("fa-angle-double-down");
         }, 250);
 
     }
-
-});
+}

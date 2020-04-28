@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-#ann-top-tools-box-2 { 
+#ann-top-tools-box-2 {
     width: 80%;
     font-size: 150%;
 }
@@ -50,7 +50,6 @@
 #ann-table {
     list-style: none;
     overflow: hidden;
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -92,7 +91,6 @@
     }
 
 .ann-subject {
-    font-size: 200%;
     border-bottom: 1px dotted rgba(195, 187, 182, 0.58);
     margin: 0 0 3% 0;
     padding: 0 0 2% 0;
@@ -100,13 +98,11 @@
 }
 
 .ann-content {
-    font-size: 125%;
     overflow: auto;
 }
 
 .ann-author {
     text-align: right;
-    font-size: 100%;
     padding: 2% 0 0 0;
 }
 
@@ -178,7 +174,7 @@
     width: 100%;
     opacity: 0.8;
     padding-top: 5px;
-   border-radius: 0.3em;
+    border-radius: 0.3em;
 }
 
 #add-ann-btn {
@@ -206,3 +202,62 @@
 
 
 
+/* --------------------------------------- MEDIA ------->- */
+/*#region MEDIA*/
+
+@media screen and (max-width: 575) {
+
+    #ann-table {
+        width: 100%;
+    }
+
+    .ann-subject {
+        font-size: 150%;
+    }
+
+    .ann-content {
+        font-size: 100%;
+    }
+
+    .ann-author {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 575px) {
+    #ann-table {
+        width: 80%;
+    }
+
+    .ann-subject {
+        font-size: 180%;
+    }
+
+    .ann-content {
+        font-size: 125%;
+    }
+
+    .ann-author {
+        font-size: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    #ann-table {
+        width: 80%;
+    }
+
+    .ann-subject {
+        font-size: 200%;
+    }
+
+    .ann-content {
+        font-size: 125%;
+    }
+
+    .ann-author {
+        font-size: 100%;
+    }
+}
+
+/*#endregion MEDIA*/

@@ -16,12 +16,12 @@
         <div id="add-new-note-box">
             <div id="information-box"><span>DODAJ NOWE ZLECENIE</span></div>
 
-            <div id="">@Html.DropDownListFor(model => model.Rodzaj_Operacji_Id, Model.Operations, "wybierz rodzaj zlecenia", new { @class = "rodzaj-operacji", @onchange = "choose_operation(this)" })</div>
+            <div id="">@Html.DropDownListFor(model => model.Rodzaj_Operacji_Id, Model.Operations, "wybierz rodzaj zlecenia", new { @class = "rodzaj-operacji"})</div>
 
             <ul id="add-new-note-list">
                 <li>
-                    @Html.EditorFor(model => model.Data_Operacji, new { htmlAttributes = new { @class = "data-operacji editors", @type = "text", @id = "datepicker" } })
-                    @Html.EditorFor(model => model.Godzina_Operacji, new { htmlAttributes = new { @class = "godzina-operacji editors" } })
+                    @Html.EditorFor(model => model.Data_Operacji, new { htmlAttributes = new { @Value= TempData["thisDay"], @class = "data-operacji editors", @type = "text", @id = "datepicker" } })
+                    @Html.EditorFor(model => model.Godzina_Operacji, new { htmlAttributes = new { @Value = TempData["thisHour"], @class = "godzina-operacji editors" } })
                 </li>
                 <li>
                     @Html.EditorFor(model => model.Klasa_Pojazdu, new { htmlAttributes = new { @placeholder = " klasa pojazdu ", @class = "klasa-pojazdu editors" } })

@@ -70,7 +70,10 @@ namespace car_rental_notes.Controllers
         [HttpGet]
         public ActionResult AddNewNote()
         {
+            System.DateTime moment = System.DateTime.Now.Add(new TimeSpan(0, 0, 0, 0));
             BoardVM boardVM = new BoardVM();
+            TempData["thisDay"] = System.DateTime.Now.Add(new TimeSpan(0, 0, 0, 0)).ToString("dd/MM/yyyy");
+            TempData["thisHour"] = moment.Hour +":"+ moment.Minute;
 
             using (Db db = new Db())
             {
