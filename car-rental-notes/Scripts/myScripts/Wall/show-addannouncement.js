@@ -1,9 +1,14 @@
-﻿console.log("??");
+﻿$("#ann-top-tools-box-3").click(function () {
+    open("#add-new-ann-btn");
+});
+
+$("#mobile-ann-top-tools-box-3").click(function () {
+    open("#mobile-add-new-ann-btn");
+});
 
 
-$("#ann-top-tools-box-3").click(function () {
-    console.log("?dd");
-    var cls = jQuery("#add-new-ann-btn").attr("class");
+function open(x) {
+    var cls = jQuery(x).attr("class");
 
     if (cls == "fas fa-plus be-center") {
 
@@ -16,8 +21,8 @@ $("#ann-top-tools-box-3").click(function () {
         }, 50);
 
         setTimeout(function () {
-            $("#add-new-ann-btn").removeClass("fas fa-plus be-center");
-            $("#add-new-ann-btn").addClass("fas fa-angle-double-up be-center");
+            $(x).removeClass("fas fa-plus be-center");
+            $(x).addClass("fas fa-angle-double-up be-center");
         }, 250);
         console.log("?2?");
     } else {
@@ -31,10 +36,9 @@ $("#ann-top-tools-box-3").click(function () {
         document.getElementById("add-new-ann").style.width = "0em";
 
         setTimeout(function () {
-            $("#add-new-ann-btn").removeClass("fas fa-angle-double-up be-center");
-            $("#add-new-ann-btn").addClass("fas fa-plus be-center");
+            $(x).removeClass("fas fa-angle-double-up be-center");
+            $(x).addClass("fas fa-plus be-center");
         }, 250);
 
     }
-
-});
+}

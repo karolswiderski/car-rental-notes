@@ -38,6 +38,37 @@ span {
 /*#endregion TOP_TOOLS_BAR_SECTION*/
 
 
+/* --------------------- MOBILE TOP TOOLS BAR SECTION ->- */
+/*#region MOBILE_TOP_TOOLS_BAR_SECTION*/
+#mobile-myaccount-top-tools-box-1, #mobile-myaccount-top-tools-box-2, #mobile-myaccount-top-tools-box-3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 33.3%;
+    float:left;
+}
+
+#myaccount-top-tools-box-1 {
+    border-right: 0.2em solid #2a2b30;
+    width: 25%;
+}
+
+#myaccount-top-tools-box-2 {
+    width: 50%;
+    background-color: #6b5b95;
+    color: white;
+}
+
+#myaccount-top-tools-box-3 {
+    border-left: 0.2em solid #2a2b30;
+    width: 25%;
+}
+
+
+/*#endregion MOBILE_TOP_TOOLS_BAR_SECTION*/
+
+
 /* ------------------------------------- PAGE CONTENT ->- */
 /*#region PAGE_CONTENT*/
 
@@ -113,4 +144,18 @@ span {
 /*#endregion EDIT_PARTIAL*/
 
 
+/*#region SMARTFON */
+@media only screen and (max-width: 575) {
+   
+}
+/*#endregion SMARTFON */
 
+/*#region TABLET */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+}
+/*#endregion TABLET */
+
+/*#region DESKTOP */
+@media only screen and (min-width: 992px) {
+}
+/*#endregion DESKTOP */

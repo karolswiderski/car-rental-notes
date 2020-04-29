@@ -31,7 +31,6 @@ function tablet() {
         if (mql.matches) {
             document.getElementById("open-left-menu-i").setAttribute("onclick", "openNavBox(2)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(2)");
-            //document.getElementById("open-left-menu-i").setAttribute("onmouseenter", "set_icon_in_btn(2)");
             
             document.getElementById("top-tools-bar").style.height = "5%";
             
@@ -54,7 +53,6 @@ function desktop() {
         if (mql.matches) {
             document.getElementById("open-left-menu-i").setAttribute("onclick", "openNavBox(3)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(3)");
-            //document.getElementById("open-left-menu-i").setAttribute("onmouseenter", "set_icon_in_btn(3)");
             
             document.getElementById("top-tools-bar").style.fontSize = "1.5vw";
             document.getElementById("top-tools-bar").style.height = "3vw";

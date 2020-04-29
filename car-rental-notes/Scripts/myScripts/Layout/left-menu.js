@@ -26,6 +26,20 @@
             .getElementById("open-left-menu-i")
             .setAttribute("onclick", "closeNavBox(" + x + ")");
     }, 500);
+
+    if (x == 3 || x == 2) {
+        var cls = $("#open-left-menu-i i").attr("class");
+        if (cls == "fas fa-bars") {
+            $("#open-left-menu-i i").css({
+                '-webkit-transform': 'rotate(45deg)',
+                '-moz-transform': 'rotate(45deg)',
+                '-ms-transform': 'rotate(45deg)',
+                'transform': 'rotate(45deg)'
+            });
+            $("#open-left-menu-i i").removeClass("fas fa-bars");
+            $("#open-left-menu-i i").addClass("fas fa-plus"); 
+        }
+    }
 }
 
 function closeNavBox(x) {
@@ -53,5 +67,18 @@ function closeNavBox(x) {
             .getElementById("open-left-menu-i")
             .setAttribute("onclick", "openNavBox(" + x + ")");
     }, 500);
-}
 
+    if (x == 3 || x == 2) {
+        var cls = $("#open-left-menu-i i").attr("class");
+        if (cls == "fas fa-plus") {
+            $("#open-left-menu-i i").css({
+                '-webkit-transform': 'rotate(0deg)',
+                '-moz-transform': 'rotate(0deg)',
+                '-ms-transform': 'rotate(0deg)',
+                'transform': 'rotate(0deg)'
+            });
+            $("#open-left-menu-i i").removeClass("fas fa-plus");
+            $("#open-left-menu-i i").addClass("fas fa-bars");
+        }
+    }
+}

@@ -46,7 +46,7 @@
     height: 100%;
     width: 25%;
     text-align: center;
-    background-color: blue;
+    font-size: 145%;
 }
 
 #mobile-ann-top-tools-box-2 {
@@ -54,7 +54,8 @@
     height: 100%;
     width: 50%;
     text-align: center;
-    background-color: red;
+    font-size: 145%;
+    letter-spacing: 0.1em
 }
 
 
@@ -73,6 +74,7 @@
 }
 
 #ann-table {
+    width: 80%;
     list-style: none;
     overflow: hidden;
     margin-left: auto;
@@ -120,13 +122,16 @@
     margin: 0 0 3% 0;
     padding: 0 0 2% 0;
     overflow: hidden;
+    font-size: 200%;
 }
 
 .ann-content {
+    font-size: 125%;
     overflow: auto;
 }
 
 .ann-author {
+    font-size: 100%;
     text-align: right;
     padding: 2% 0 0 0;
 }
@@ -230,34 +235,13 @@
 /* --------------------------------------- MEDIA ------->- */
 /*#region MEDIA*/
 
-@media screen and (max-width: 575) {
-
+@media screen and (max-width: 991px) {
     #ann-table {
         width: 100%;
     }
 
     .ann-subject {
         font-size: 150%;
-    }
-
-    .ann-content {
-        font-size: 100%;
-    }
-
-    .ann-author {
-        font-size: 100%;
-    }
-
-
-}
-
-@media screen and (max-width: 991px) and (min-width: 575px) {
-    #ann-table {
-        width: 80%;
-    }
-
-    .ann-subject {
-        font-size: 180%;
     }
 
     .ann-content {
@@ -270,21 +254,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    #ann-table {
-        width: 80%;
-    }
-
-    .ann-subject {
-        font-size: 200%;
-    }
-
-    .ann-content {
-        font-size: 125%;
-    }
-
-    .ann-author {
-        font-size: 100%;
-    }
+    
 }
 
 /*#endregion MEDIA*/

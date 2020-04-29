@@ -88,3 +88,43 @@ function top_tools_mouseleave(tag) {
     document.getElementById(tag).style.color = "#b3b3cc";
     document.getElementById(tag).style.backgroundColor = "#1c1d22";
 }
+
+
+
+// -- mobile:
+
+$("#mobile-myaccount-top-tools-box-1").click(function () {
+    change_partial("myOperations-history-partial", 1,
+        "myOperations-today-partial", 2,
+        "myOperations-future-partial", 3);
+});
+
+$("#mobile-myaccount-top-tools-box-2").click(function () {
+    change_partial("myOperations-today-partial", 2,
+        "myOperations-history-partial", 1,
+        "myOperations-future-partial", 3);
+});
+
+$("#mobile-myaccount-top-tools-box-3").click(function () {
+    change_partial("myOperations-future-partial", 3,
+        "myOperations-history-partial", 1,
+        "myOperations-today-partial", 2);
+});
+
+$("#mobile-myaccount-top-tools-box-1").click(function () {
+    top_tools_mouseleave("mobile-myaccount-top-tools-box-2");
+    top_tools_mouseleave("mobile-myaccount-top-tools-box-3");
+    top_tools_mouseenter("mobile-myaccount-top-tools-box-1");
+});
+
+$("#mobile-myaccount-top-tools-box-2").click(function () {
+    top_tools_mouseleave("mobile-myaccount-top-tools-box-3");
+    top_tools_mouseleave("mobile-myaccount-top-tools-box-1");
+    top_tools_mouseenter("mobile-myaccount-top-tools-box-2");
+});
+
+$("#mobile-myaccount-top-tools-box-3").click(function () {
+    top_tools_mouseleave("mobile-myaccount-top-tools-box-2");
+    top_tools_mouseleave("mobile-myaccount-top-tools-box-1");
+    top_tools_mouseenter("mobile-myaccount-top-tools-box-3");
+});

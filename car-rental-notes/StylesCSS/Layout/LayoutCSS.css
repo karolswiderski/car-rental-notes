@@ -156,6 +156,7 @@ a:active {
     font-size: 100%;
     font-family: 'Baloo 2', cursive;
     display: block;
+    margin-bottom: 1%;
 }
 
 #open-left-menu-i {
@@ -165,13 +166,11 @@ a:active {
     float: right;
 }
 
-  
-
 #top-tools-bar {
     width: 80%;
     height: 5%;
     background-color: #1c1d22;
-    margin-top: 5%;
+    margin-top: 6%;
     margin-left: auto;
     margin-right: auto;
     color: #b3b3cc;
@@ -190,13 +189,7 @@ a:active {
 
 /*#endregion CONTENT */
 
-.rotated {
-    -webkit-transform: rotate(160deg);
-    -moz-transform: rotate(160deg);
-    -o-transform: rotate(160deg);
-    -ms-transform: rotate(160deg);
-    transform: rotate(160deg);
-}
+
 /* --------------------------------------- MEDIA ------->- */
 /*#region MEDIA*/
 
@@ -219,36 +212,33 @@ a:active {
 
 /*#region DESKTOP */
 @media only screen and (min-width: 992px) {
-}
-/*#endregion DESKTOP */
-
-/*#region MORE_THAN_SMARTFON */
-@media only screen and (min-width: 576px) {
-    #mobile-top-tools-bar {
-        display: none;
-    }
-
-    #top-tools-bar {
-        display: flex;
-    }
-
     #open-left-menu-i:hover {
         color: #6565d7;
         font-size: 210%;
         transition: 0.3s;
-        -webkit-animation: rotation 2s infinite linear;
+        /*-webkit-animation: rotation 2s infinite linear;T */
     }
 
     @-webkit-keyframes rotation {
-		from {
-				-webkit-transform: rotate(0deg);
-		}
-		to {
-				-webkit-transform: rotate(359deg);
-		}
-}
-  
-}
-/*#endregion MORE_THAN_SMARTFON */
+        from {
+            -webkit-transform: rotate(0deg);
+        }
 
-/*#endregion MEDIA*/
+        to {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+}
+/*#endregion DESKTOP */
+        /*#region MORE_THAN_SMARTFON */
+        @media only screen and (min-width: 576px) {
+            #mobile-top-tools-bar {
+                display: none;
+            }
+
+            #top-tools-bar {
+                display: flex;
+            }
+        }
+        /*#endregion MORE_THAN_SMARTFON */
+        /*#endregion MEDIA*/

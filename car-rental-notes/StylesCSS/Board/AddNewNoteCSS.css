@@ -102,64 +102,6 @@
 /* ------------------------------------ MEDIA SECTION ->- */
 /*#region MEDIA_SECTION*/
 
-@media screen and (max-width: 575) {
-
-
-    #add-new-note-list li {
-        width: 100%;
-        height: 100%;
-        margin: 0 0 10px 0;
-    }
-
-    .rodzaj-operacji {
-        font-size: 100%;
-    }
-
-    .editors {
-        height: 100%;
-        font-family: 'Rajdhani', sans-serif;
-        text-align: center;
-        font-size: 120%;
-        font-style: initial;
-        color: black;
-    }
-
-    .data-operacji {
-    }
-
-    .godzina-operacji {
-    }
-
-    .klasa-pojazdu {
-    }
-
-    .samochod {
-    }
-
-    .miejsce-operacji {
-    }
-
-    .nazwa-klienta {
-    }
-
-    .telefon {
-    }
-
-    .zlecajacy {
-    }
-
-    #uwagi-box {
-    }
-}
-
-
-
-
-
-
-
-
-
 @media (min-width: 575px) {
     #add-new-note-list li {
         display: inline-flex;
