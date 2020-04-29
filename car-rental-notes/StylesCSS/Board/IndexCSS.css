@@ -204,6 +204,10 @@ a:active {
 /* ---------------------------- TOP TOOLS BAR SECTION ->- */
 /*#region TOP_TOOLS_BAR_SECTION*/
 
+#board-index-top-tools-bar {
+    display: none;
+}
+
 #top-tools-box-1, #top-tools-box-5, #top-tools-box-2, #top-tools-box-4 {
     height: 100%;
     padding: 0 2% 0 2%;
@@ -230,6 +234,10 @@ a:active {
 
 /* --------------------- MOBILE TOP TOOLS BAR SECTION ->- */
 /*#region MOBILE_TOP_TOOLS_BAR_SECTION*/
+
+#mobile-board-index-top-tools-bar {
+    display: block;
+}
 
 #mobile-top-tools-box-1, #mobile-top-tools-box-2, #mobile-top-tools-box-4, #mobile-top-tools-box-5 {
     width: 15%;
@@ -275,14 +283,43 @@ a:active {
 /* ------------------------------------ MEDIA SECTION ->- */
 /*#region MEDIA_SECTION*/
 
-@media screen and (max-width: 575) {
-   
-}
+/*#region SMARTFON */
+@media only screen and (max-width: 575) {
+    #mobile-board-index-top-tools-bar {
+        display: block;
+    }
 
-@media (max-width: 991px) and (min-width: 575px) {
+    #board-index-top-tools-bar {
+        display: none;
+    }
+ 
 }
+/*#endregion SMARTFON */
 
-@media (min-width: 992px) {
+/*#region TABLET */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+
 }
+/*#endregion TABLET */
+
+/*#region DESKTOP */
+@media only screen and (min-width: 992px) {
+
+}
+/*#endregion DESKTOP */
+
+/*#region MORE_THAN_SMARTFON */
+@media only screen and (min-width: 576px) {
+    #mobile-board-index-top-tools-bar {
+        display: none;
+    }
+
+    #board-index-top-tools-bar {
+        display: block;
+    }
+}
+/*#endregion MORE_THAN_SMARTFON */
+
+
 
 /*#endregion MEDIA_SECTION*/

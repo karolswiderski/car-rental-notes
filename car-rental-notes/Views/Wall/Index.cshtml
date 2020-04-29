@@ -12,6 +12,12 @@
     <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
     <script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
 
+    @section mobile_top_tools_bar{
+        <div id="mobile-ann-top-tools-box-1"> </div>
+        <div id="mobile-ann-top-tools-box-2"><span class="mobile-be-center">OGŁOSZENIA</span></div>
+        <div id="mobile-ann-top-tools-box-3"><i class="fas fa-plus be-center" id="mobile-add-new-ann-btn"></i></div>
+    }
+
     @section top_tools_bar{
         <div id="ann-top-tools-box-1"></div>
         <div id="ann-top-tools-box-2"><span class="be-center">OGŁOSZENIA</span></div>
@@ -58,7 +64,7 @@
 else
 {
     @Scripts.Render("~/bundles/jquery")
-    <script type="text/javascript">
-         $(function(){ window.location.href = "@Url.Action("Login","Account")";});
+    <script type = "text/javascript" >
+    $(function(){ window.location.href = "@Url.Action("Login", "Account")"; });
     </script>
 }

@@ -7,11 +7,9 @@ function mobile() {
 
     function checkMedia(mql) {
         if (mql.matches) {
-            document.getElementById("open-close-left-menu").setAttribute("onmouseover", "openNavBox(1)");
+            document.getElementById("open-left-menu-i").setAttribute("onclick", "openNavBox(1)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(1)");
-
-            document.getElementById("top-tools-bar").style.display = "none";
-            document.getElementById("mobile-top-tools-bar").style.display = "block";
+            
 
             console.log("Mobile");
         }
@@ -31,11 +29,12 @@ function tablet() {
 
     function checkMedia(mql) {
         if (mql.matches) {
-            document.getElementById("open-close-left-menu").setAttribute("onmouseover", "openNavBox(2)");
+            document.getElementById("open-left-menu-i").setAttribute("onclick", "openNavBox(2)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(2)");
-
-            document.getElementById("top-tools-bar").style.display = "flex";
+            //document.getElementById("open-left-menu-i").setAttribute("onmouseenter", "set_icon_in_btn(2)");
+            
             document.getElementById("top-tools-bar").style.height = "5%";
+            
 
             console.log("tablet");
         }
@@ -53,12 +52,13 @@ function desktop() {
 
     function checkMedia(mql) {
         if (mql.matches) {
-            document.getElementById("open-close-left-menu").setAttribute("onmouseover", "openNavBox(3)");
+            document.getElementById("open-left-menu-i").setAttribute("onclick", "openNavBox(3)");
             document.getElementById("back-to-content-btn").setAttribute("onclick", "closeNavBox(3)");
-
-            document.getElementById("top-tools-bar").style.display = "flex";
+            //document.getElementById("open-left-menu-i").setAttribute("onmouseenter", "set_icon_in_btn(3)");
+            
             document.getElementById("top-tools-bar").style.fontSize = "1.5vw";
             document.getElementById("top-tools-bar").style.height = "3vw";
+            
 
             console.log("desktop");
         }

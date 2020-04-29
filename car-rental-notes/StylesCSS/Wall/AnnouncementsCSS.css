@@ -36,6 +36,31 @@
 
 
 /*#endregion TOP_TOOLS_BAR_SECTION*/
+
+
+/* --------------------- MOBILE TOP TOOLS BAR SECTION ->- */
+/*#region MOBILE_TOP_TOOLS_BAR_SECTION*/
+
+#mobile-ann-top-tools-box-1, #mobile-ann-top-tools-box-3 {
+    float: left;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    background-color: blue;
+}
+
+#mobile-ann-top-tools-box-2 {
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    background-color: red;
+}
+
+
+/*#endregion MOBILE_TOP_TOOLS_BAR_SECTION*/
+
+
 /* ------------------------------------- ANN(..) ------->- */
 /*#region ANN*/
 #anns {
@@ -222,9 +247,11 @@
     .ann-author {
         font-size: 100%;
     }
+
+
 }
 
-@media (max-width: 991px) and (min-width: 575px) {
+@media screen and (max-width: 991px) and (min-width: 575px) {
     #ann-table {
         width: 80%;
     }
@@ -242,7 +269,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     #ann-table {
         width: 80%;
     }
