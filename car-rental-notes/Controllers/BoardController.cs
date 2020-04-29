@@ -18,7 +18,7 @@ namespace car_rental_notes.Controllers
                 TempData["NumberOfDays"] = 0;
             }
             else
-            { //jeżeli metoda Index została wywolana w NextDay/PreviousDay:
+            { 
                 TempData["SelectedDate"] = whichDay;
                 TempData["NumberOfDays"] = numberOfDays;
             }
@@ -86,12 +86,14 @@ namespace car_rental_notes.Controllers
         [HttpPost]
         public ActionResult AddNewNote(BoardVM boardVM)
         {
+            if (boardVM.Rodzaj_Operacji_Id == 0) {
+                return View(boardVM);
+            }
+
             if (!ModelState.IsValid)
             {
                 return View(boardVM);
             }
-           
-           
 
             using (Db db = new Db())
             {
@@ -123,7 +125,6 @@ namespace car_rental_notes.Controllers
         [HttpGet]
         public ActionResult DeleteNote(int id)
         {
-
             using (Db db = new Db())
             {
                 BoardDTO dto = db.Board.Find(id);
@@ -139,6 +140,7 @@ namespace car_rental_notes.Controllers
             }
             catch (NullReferenceException e)
             {
+                Console.WriteLine(e);
                 return RedirectToAction("Index");
             }
 

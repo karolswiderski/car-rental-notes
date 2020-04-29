@@ -1,8 +1,9 @@
-﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Wall.AnnouncementsVM>
+﻿
+@model IEnumerable<car_rental_notes.Models.ViewModels.Wall.AnnouncementsVM>
 
 <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
 <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
-<script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
+@Scripts.Render("~/bundles/wall")
 
 @if (Request.IsAuthenticated)
 {
@@ -10,7 +11,7 @@
         ViewBag.Title = "Ogłoszenia";
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
-    
+
     @section mobile_top_tools_bar{
         <div id="mobile-ann-top-tools-box-1" class="top-mobile"> </div>
         <div id="mobile-ann-top-tools-box-2" class="top-mobile"><span class="mobile-be-center">OGŁOSZENIA</span></div>
@@ -28,7 +29,7 @@
             @if (User.Identity.IsAuthenticated)
             {
                 <li>
-                    <div class="ann-daily-info"><strong>Cześć @User.Identity.Name! Dzisiaj mamy @TempData["Today"] zaplanowane zlecenie/a, @TempData["YourOp"] z nich jest/są przypisane Tobie.</strong></div>
+                    <div class="ann-daily-info"><strong>Cześć @User.Identity.Name! @TempData["Today"]@TempData["YourOp"]</strong></div>
                 </li>
             }
 

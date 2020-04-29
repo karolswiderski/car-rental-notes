@@ -12,17 +12,26 @@ namespace car_rental_notes.Controllers
         // GET: Wall
         public ActionResult Index()
         {
+            int todayCount, yourCount;
             string userName = User.Identity.Name;
             DateTime today = Convert.ToDateTime(System.DateTime.Now.Add(new TimeSpan(0, 0, 0, 0)).ToString("dd/MM/yyyy"));
             List<AnnouncementsVM> AnnouncementsList;
-
             using (Db db = new Db())
             {
                 AnnouncementsList = db.Announcements.ToArray().Select(x => new AnnouncementsVM(x)).ToList();
-                TempData["Today"] = db.Board.Where(x => x.Data_Operacji == today).Count();
-                TempData["YourOp"] = db.Board.Where(x => x.Data_Operacji == today && x.Wykonawca == userName).Count();
+                todayCount = db.Board.Where(x => x.Data_Operacji == today).Count();
+                yourCount = db.Board.Where(x => x.Data_Operacji == today && x.Wykonawca == userName).Count();
             }
 
+            if (todayCount == 0) TempData["Today"] = "Brak zaplanowanych zleceń w dniu dzisiejszym"; 
+            else if (todayCount == 1) TempData["Today"] = "Dzisiaj mamy jedno zaplanowane zlecenie ";
+            else if (todayCount > 1 && todayCount < 5 ) TempData["Today"] = "Dzisiaj mamy " + todayCount + " zaplanowane zlecenia";
+            else if (todayCount > 2) TempData["Today"] = "Dzisiaj mamy " + todayCount + " zaplanowanych zleceń";
+
+
+            if (todayCount != 0 && yourCount == 0) TempData["YourOp"] = "."; 
+            else if (yourCount == 1) TempData["YourOp"] = ", jedno należy do Ciebie.";
+            else if (yourCount > 1) TempData["YourOp"] = ", " + yourCount + " należy do Ciebie.";
 
             return View(AnnouncementsList);
         }
