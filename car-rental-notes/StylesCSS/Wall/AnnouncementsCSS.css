@@ -37,30 +37,26 @@
 
 /*#endregion TOP_TOOLS_BAR_SECTION*/
 
-
 /* --------------------- MOBILE TOP TOOLS BAR SECTION ->- */
 /*#region MOBILE_TOP_TOOLS_BAR_SECTION*/
 
 #mobile-ann-top-tools-box-1, #mobile-ann-top-tools-box-3 {
-    float: left;
-    height: 100%;
     width: 25%;
-    text-align: center;
-    font-size: 145%;
 }
 
 #mobile-ann-top-tools-box-2 {
-    float: left;
-    height: 100%;
     width: 50%;
-    text-align: center;
-    font-size: 145%;
     letter-spacing: 0.1em
 }
 
+.top-mobile {
+    font-size: 145%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
 
 /*#endregion MOBILE_TOP_TOOLS_BAR_SECTION*/
-
 
 /* ------------------------------------- ANN(..) ------->- */
 /*#region ANN*/
@@ -90,17 +86,14 @@
         position: relative;
     }
 
-
 .ann-main-box {
     width: 80%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 2%;
     border-radius: 5px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 204, 1);
-    color: black;
     -moz-transition: -moz-transform 0.15s linear;
     -o-transition: -o-transform 0.15s linear;
     -webkit-transition: -webkit-transform 0.15s linear;
@@ -113,8 +106,6 @@
         -webkit-transform: scale(1.25);
         -moz-transform: scale(1.25);
         -o-transform: scale(1.25);
-        position: relative;
-        z-index: 3;
     }
 
 .ann-subject {
@@ -147,7 +138,6 @@
     background-color: rgba(204, 251, 255, 1);
 }
 /*#endregion ANN*/
-
 
 /* --------------------------------- ADD NEW ANN(..) -->- */
 /*#region ADD_NEW_ANN*/
@@ -185,7 +175,6 @@
 
 .editors {
     height: 100%;
-    font-family: 'Rajdhani', sans-serif;
     text-align: center;
     font-size: 120%;
     font-style: initial;
@@ -226,17 +215,13 @@
         color: white;
     }
 
-
-
 /*#endregion ADD_NEW_ANN*/
-
-
 
 /* --------------------------------------- MEDIA ------->- */
 /*#region MEDIA*/
 
 @media screen and (max-width: 991px) {
-    #ann-table {
+    #ann-table{
         width: 100%;
     }
 
@@ -247,14 +232,6 @@
     .ann-content {
         font-size: 125%;
     }
-
-    .ann-author {
-        font-size: 100%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    
 }
 
 /*#endregion MEDIA*/

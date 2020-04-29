@@ -1,21 +1,20 @@
 ﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Wall.AnnouncementsVM>
+
+<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
+<link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
+<script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
+
 @if (Request.IsAuthenticated)
 {
     {
         ViewBag.Title = "Ogłoszenia";
         Layout = "~/Views/Shared/_Layout.cshtml";
-
     }
-
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
-    @Scripts.Render("~/bundles/jquery")
-    <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
-    <script src="~/Scripts/myScripts/Wall/show-addannouncement.js"></script>
-
+    
     @section mobile_top_tools_bar{
-        <div id="mobile-ann-top-tools-box-1"> </div>
-        <div id="mobile-ann-top-tools-box-2"><span class="mobile-be-center">OGŁOSZENIA</span></div>
-        <div id="mobile-ann-top-tools-box-3"><i class="fas fa-plus be-center" id="mobile-add-new-ann-btn"></i></div>
+        <div id="mobile-ann-top-tools-box-1" class="top-mobile"> </div>
+        <div id="mobile-ann-top-tools-box-2" class="top-mobile"><span class="mobile-be-center">OGŁOSZENIA</span></div>
+        <div id="mobile-ann-top-tools-box-3" class="top-mobile"><i class="fas fa-plus be-center" id="mobile-add-new-ann-btn"></i></div>
     }
 
     @section top_tools_bar{
@@ -26,7 +25,6 @@
 
     <div id="anns">
         <ul id="ann-table">
-
             @if (User.Identity.IsAuthenticated)
             {
                 <li>
@@ -50,18 +48,15 @@
                         </div>
                         <div class="ann-content">@item.Tresc</div>
                         <div class="ann-author">utworzono <i>@item.Data.Date.ToString("dd.MM.yyyy")</i> przez <i>@item.Autor</i></div>
-
                     </div>
                 </li>
-
             }
         </ul>
     </div>
 }
 else
 {
-    @Scripts.Render("~/bundles/jquery")
-    <script type = "text/javascript" >
+    <script type="text/javascript">
     $(function(){ window.location.href = "@Url.Action("Login", "Account")"; });
     </script>
 }

@@ -225,7 +225,6 @@
     <Content Include="Scripts\myScripts\Layout\left-menu.js" />
     <Content Include="Scripts\myScripts\Layout\set-display.js" />
     <Content Include="Scripts\myScripts\Wall\show-addannouncement.js" />
-    <Content Include="StylesCSS\Account\EditAccountCSS.css" />
     <Content Include="StylesCSS\Account\LoginCSS.css" />
     <Content Include="StylesCSS\Account\MyAccountCSS.css" />
     <Content Include="StylesCSS\Board\AddNewNoteCSS.css" />

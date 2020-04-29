@@ -17,9 +17,7 @@
 <body>
 
     <div id="main-container">
-
         <div id="left-menu-container">
-
             <div id="logo-box"></div>
 
             <nav id="left-menu-navigation">
@@ -40,7 +38,6 @@
                         <li><a href="/Account/Logout">WYLOGUJ SIĘ</a></li>
                     }
                 </ul>
-
             </div>
 
             <div id="back-to-content-box">
@@ -49,32 +46,19 @@
         </div>
 
         <div id="page-content">
-
             <div id="content-box">
-                <div id="mobile-top-tools-bar">
-                    @RenderSection("mobile_top_tools_bar", false)
-                </div>
+                <div id="mobile-top-tools-bar">@RenderSection("mobile_top_tools_bar", false)</div>
 
                 <div id="open-left-menu-i" onclick=""><i class="fas fa-bars"></i></div>
 
-                <div id="top-tools-bar">
-                    @RenderSection("top_tools_bar", false)
-                </div>
+                <div id="top-tools-bar">@RenderSection("top_tools_bar", false)</div>
 
-                <div id="render-body-box">
-                    @RenderBody();
-                </div>
+                <div id="render-body-box">@RenderBody();</div>
             </div>
-
         </div>
-
     </div>
 
-
-    @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/layout")
     @RenderSection("scripts", required: false)
-    @Scripts.Render("~/bundles/modernizr")
-
 </body>
 </html>

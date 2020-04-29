@@ -1,19 +1,12 @@
 ﻿/* --------------------------------------- NOTE ------->- */
 /*#region NOTE*/
 
-a,
-a:hover,
-a:active {
-    text-decoration: none;
-}
-
 #table {
     list-style: none;
     overflow: hidden;
     font-family: "Raleway", sans-serif;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 0;
     font-size: 16px;
     position: relative;
@@ -33,8 +26,6 @@ a:active {
     -moz-transition: -moz-transform 0.15s linear;
     -o-transition: -o-transform 0.15s linear;
     -webkit-transition: -webkit-transform 0.15s linear;
-    background-color: white;
-    
 }
 
     .single-note-box:hover, .single-note-box:focus {
@@ -44,19 +35,14 @@ a:active {
         -webkit-transform: scale(1.25);
         -moz-transform: scale(1.25);
         -o-transform: scale(1.25);
-        position: relative;
-        z-index: 3;
     }
 
 /*#endregion NOTE*/
-
 
 /* --------------------------------------- FRONT SIDE ->- */
 /*#region FRONT_SIDE*/
 
 .front-note-side {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
     display: block;
     background-color: white;
@@ -66,32 +52,27 @@ a:active {
 }
 
 .front-box-1 {
-    width: 100%;
     height: 8%;
     font-size: 75%;
     border-bottom: 0.1em solid white;
 }
 
 .front-box-2 {
-    width: 100%;
     margin-top: 20%;
     height: 20%;
     font-size: 270%;
 }
 
 .front-box-3 {
-    width: 100%;
     font-size: 90%;
 }
 
 .front-box-4 {
-    width: 100%;
     height: 10%;
     font-size: 80%;
 }
 
 .front-box-5 {
-    width: 100%;
     height: 15%;
     font-size: 150%;
     position: absolute;
@@ -100,13 +81,10 @@ a:active {
 
 /*#endregion FRONT_SIDE*/
 
-
 /* --------------------------------------- BACK SIDE -->- */
 /*#region BACK_SIDE*/
 
 .back-note-side {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
     display: none;
     background-color: white;
@@ -115,7 +93,6 @@ a:active {
 /* top menu: */
 
 .back-side-menu {
-    width: 100%;
     height: 3%;
     overflow: hidden;
     color: #ebfafa;
@@ -126,41 +103,25 @@ a:active {
     transition: 0.5s;
 }
 
-.add-btn-box {
-    width: 10%;
-    height: 100%;
-    display: none;
-    text-align: center;
-}
-
-.edit-btn-box {
-    width: 10%;
-    height: 100%;
-    display: none;
-    text-align: center;
-}
-
 .space-for-new-btn {
     width: 70%
 }
 
-.delete-btn-box {
+.back-btn-box {
     width: 10%;
-    height: 100%;
     display: none;
     text-align: center;
+    padding-top: 1%;
 }
 
-    .add-option-img:hover, .edit-option-img:hover, .delete-option-img:hover {
-        font-size: 90%;
-        color: #6B5B95;
-    }
+.add-option-img:hover, .edit-option-img:hover, .delete-option-img:hover {
+    font-size: 90%;
+    color: #6B5B95;
+}
 
 /* content */
 
 .back-side-content {
-    width: 100%;
-    height: 100%;
     color: white;
     text-align: center;
     font-size: 100%;
@@ -168,42 +129,43 @@ a:active {
 }
 
 .back-box-1 {
-    width: 100%;
     height: 10%;
     font-size: 80%;
     margin-top: 10%;
 }
 
 .back-box-2 {
-    width: 100%;
     min-height: 10%;
     font-size: 100%;
 }
 
 .back-box-3 {
-    width: 100%;
     height: 10%;
     font-size: 100%;
 }
 
 .back-box-4 {
-    width: 100%;
     height: 10%;
     font-size: 80%;
 }
 
 .back-box-5 {
-    width: 100%;
     height: 50%;
     font-size: 90%;
 }
 
-/*#endregion BACK_SIDE*/
+.max-width {
+    width: 100%;
+}
 
+.max-height {
+    height: 100%;
+}
+
+/*#endregion BACK_SIDE*/
 
 /* ---------------------------- TOP TOOLS BAR SECTION ->- */
 /*#region TOP_TOOLS_BAR_SECTION*/
-
 #board-index-top-tools-bar {
     display: none;
 }
@@ -214,8 +176,6 @@ a:active {
     display: flex;
     align-items: center;
 }
-
-
 
     #top-tools-box-2:hover, #top-tools-box-4:hover, #top-tools-box-5:hover {
         color: white;
@@ -231,7 +191,6 @@ a:active {
 }
 /*#endregion TOP_TOOLS_BAR_SECTION*/
 
-
 /* --------------------- MOBILE TOP TOOLS BAR SECTION ->- */
 /*#region MOBILE_TOP_TOOLS_BAR_SECTION*/
 
@@ -239,7 +198,7 @@ a:active {
     display: block;
 }
 
-#mobile-top-tools-box-1, #mobile-top-tools-box-2, #mobile-top-tools-box-4, #mobile-top-tools-box-5 {
+.same-width {
     width: 15%;
 }
 
@@ -258,19 +217,16 @@ a:active {
     text-align: center;
 }
 
-
 /*#endregion MOBILE_TOP_TOOLS_BAR_SECTION*/
+
 /* ------------------------------------- ADD NEW NOTE ->- */
 /*#region ADD_NEW_NOTE*/
 #add-new-note-content {
     width: 80%;
     height: 0%;
-    margin-top: 0.2%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.2% auto;
     color: #b3b3cc;
     font-size: 100%;
-    font-family: "Raleway", sans-serif;
     transition: 0.5s;
     display: flex;
     transition: 0.5s;
@@ -278,12 +234,9 @@ a:active {
 
 /*#endregion ADD_NEW_NOTE*/
 
-
-
 /* ------------------------------------ MEDIA SECTION ->- */
 /*#region MEDIA_SECTION*/
 
-/*#region SMARTFON */
 @media only screen and (max-width: 575) {
     #mobile-board-index-top-tools-bar {
         display: block;
@@ -294,21 +247,7 @@ a:active {
     }
  
 }
-/*#endregion SMARTFON */
 
-/*#region TABLET */
-@media screen and (min-width: 576px) and (max-width: 991px) {
-
-}
-/*#endregion TABLET */
-
-/*#region DESKTOP */
-@media only screen and (min-width: 992px) {
-
-}
-/*#endregion DESKTOP */
-
-/*#region MORE_THAN_SMARTFON */
 @media only screen and (min-width: 576px) {
     #mobile-board-index-top-tools-bar {
         display: none;
@@ -318,8 +257,5 @@ a:active {
         display: block;
     }
 }
-/*#endregion MORE_THAN_SMARTFON */
-
-
 
 /*#endregion MEDIA_SECTION*/

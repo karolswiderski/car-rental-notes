@@ -34,9 +34,7 @@ span {
     width: 25%;
 }
 
-
 /*#endregion TOP_TOOLS_BAR_SECTION*/
-
 
 /* --------------------- MOBILE TOP TOOLS BAR SECTION ->- */
 /*#region MOBILE_TOP_TOOLS_BAR_SECTION*/
@@ -65,9 +63,7 @@ span {
     width: 25%;
 }
 
-
 /*#endregion MOBILE_TOP_TOOLS_BAR_SECTION*/
-
 
 /* ------------------------------------- PAGE CONTENT ->- */
 /*#region PAGE_CONTENT*/
@@ -75,9 +71,7 @@ span {
 #myOperations-history-partial, #myOperations-today-partial, #myOperations-future-partial {
     width: 80%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
+    margin: 2.5% auto;
     display: none;
 }
 
@@ -86,7 +80,6 @@ span {
 }
 
 /*#endregion PAGE_CONTENT*/
-
 
 /* ------------------------------- OPERATIONS PARTIAL ->- */
 /*#region OPERATIONS_PARTIAL*/
@@ -113,9 +106,7 @@ span {
 .my-operations-partial-box {
     width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2em;
+    margin: 1em auto;
     border-bottom: 1px dotted rgba(195, 187, 182, 0.58);
 }
 
@@ -126,36 +117,3 @@ span {
 }
 
 /*#endregion OPERATIONS_PARTIAL*/
-
-
-/* ---------------------------------- DETAILS PARTIAL ->- */
-/*#region DETAILS_PARTIAL*/
-
-
-
-/*#endregion DETAILS_PARTIAL*/
-
-
-/* ------------------------------------- EDIT PARTIAL ->- */
-/*#region EDIT_PARTIAL*/
-
-
-
-/*#endregion EDIT_PARTIAL*/
-
-
-/*#region SMARTFON */
-@media only screen and (max-width: 575) {
-   
-}
-/*#endregion SMARTFON */
-
-/*#region TABLET */
-@media screen and (min-width: 576px) and (max-width: 991px) {
-}
-/*#endregion TABLET */
-
-/*#region DESKTOP */
-@media only screen and (min-width: 992px) {
-}
-/*#endregion DESKTOP */

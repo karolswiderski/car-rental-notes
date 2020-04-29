@@ -22,9 +22,7 @@
     document.getElementById("mmb-ul-element").style.display = "block";
 
     setTimeout(function () {
-        document
-            .getElementById("open-left-menu-i")
-            .setAttribute("onclick", "closeNavBox(" + x + ")");
+        document.getElementById("open-left-menu-i").setAttribute("onclick", "closeNavBox(" + x + ")");
     }, 500);
 
     if (x == 3 || x == 2) {
@@ -44,10 +42,8 @@
 
 function closeNavBox(x) {
     document.getElementById("left-menu-container").removeAttribute("onmouseover");
-
     document.getElementById("left-menu-container").style.opacity = "0.1";
     document.getElementById("left-menu-container").style.background = "#6b5b95";
-    
 
     if (x == 3 || x == 2 || x == 1) {
         document.getElementById("left-menu-container").style.width = "0.5%";

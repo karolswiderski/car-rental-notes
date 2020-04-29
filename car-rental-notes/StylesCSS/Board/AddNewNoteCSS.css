@@ -37,10 +37,8 @@
     flex-wrap: wrap;
 }
 
-
-
-
 /*#endregion CONTENT*/
+
 /* ----------------------------------------- EDITORS -->- */
 /*#region EDITORS*/
 
@@ -52,7 +50,7 @@
 .rodzaj-operacji {
     width: 70%;
     height: 15%;
-    margin: 1% 15% 1% 15%;
+    margin: 1% 15%;
     font-family: 'Rajdhani', sans-serif;
     letter-spacing: 0.2em;
     text-align: center;
@@ -63,12 +61,9 @@
         padding-left: 0.3em;
     }
 
-
 #uwagi-box {
-    margin-top: 2%;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1% auto;
 }
 
 .uwagi {
@@ -95,7 +90,6 @@
         color: rgba(227, 219, 250, 1);
         font-size: 150%;
     }
-
 
 /*#endregion EDITORS*/
 
@@ -172,7 +166,3 @@
 }
 
 /*#endregion MEDIA_SECTION*/
-
-
-
-

@@ -1,16 +1,14 @@
-﻿// --- Obracanie się notatki po najechaniu:
-
-$(".single-note-box").hover(function (event) {
+﻿$(".single-note-box").hover(function (event) {
     var id = jQuery(this).attr("id");
     var ak = jQuery(this).attr("accesskey");
 
-    if (ak == 9) { // jeżeli najade na przód -> pokaż tył
+    if (ak == 9) {
         setTimeout(function () {
             $("#" + id + " .front-note-side").toggle(false);
             $("#" + id + " .back-note-side").toggle(true);
             $("#" + id).attr("accesskey", 8);
         }, 10);
-    } else if (ak == 8) { // jeżeli na tył -> pokaż przód
+    } else if (ak == 8) {
         setTimeout(function () {
             $("#" + id + " .back-note-side").toggle(false);
             $("#" + id + " .front-note-side").toggle(true);
@@ -18,9 +16,6 @@ $(".single-note-box").hover(function (event) {
         }, 10);
     }
 });
-
-
-// --- Blokada notatki po kliknięciu:
 
 $(".single-note-box").click(function (event) {
     var id = jQuery(this).attr("id");
@@ -38,9 +33,6 @@ $(".single-note-box").click(function (event) {
         $("#" + id).attr("accesskey", 8);
     }
 });
-
-
-// --- Obsługa back-menu (rozwiń/zwiń):
 
 function show_back_menu(x) {
     x.style.height = "10%";

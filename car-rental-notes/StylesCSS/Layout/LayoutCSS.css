@@ -22,7 +22,6 @@ a:active {
 
 /*#endregion FOUNDATIONS */
 
-
 /*--------------------------------------- LEFT MENU ---->- */
 /*#region LEFTMENU */
 
@@ -30,9 +29,6 @@ a:active {
     height: 100%;
     width: 0%;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
     background-color: #6b5b95;
     opacity: 0.1;
     overflow-x: hidden;
@@ -116,11 +112,8 @@ a:active {
 }
 /*#endregion LEFTMENU */
 
-
 /*--------------------------------------- CONTENT ------>- */
 /*#region CONTENT */
-
-
 
 #page-content {
     transition: margin-left 0.5s;
@@ -162,7 +155,7 @@ a:active {
 #open-left-menu-i {
     font-size: 200%;
     color: #b3b3cc;
-    margin: 1% 2% 1% 2%;
+    margin: 1% 2%;
     float: right;
 }
 
@@ -189,11 +182,9 @@ a:active {
 
 /*#endregion CONTENT */
 
-
 /* --------------------------------------- MEDIA ------->- */
 /*#region MEDIA*/
 
-/*#region SMARTFON */
 @media only screen and (max-width: 575) {
     #mobile-top-tools-bar {
         display: block;
@@ -203,42 +194,22 @@ a:active {
         display: none;
     }
 }
-/*#endregion SMARTFON */
 
-/*#region TABLET */
-@media screen and (min-width: 576px) and (max-width: 991px) {
-}
-/*#endregion TABLET */
-
-/*#region DESKTOP */
 @media only screen and (min-width: 992px) {
     #open-left-menu-i:hover {
         color: #6565d7;
         font-size: 210%;
         transition: 0.3s;
-        /*-webkit-animation: rotation 2s infinite linear;T */
-    }
-
-    @-webkit-keyframes rotation {
-        from {
-            -webkit-transform: rotate(0deg);
-        }
-
-        to {
-            -webkit-transform: rotate(359deg);
-        }
     }
 }
-/*#endregion DESKTOP */
-        /*#region MORE_THAN_SMARTFON */
-        @media only screen and (min-width: 576px) {
-            #mobile-top-tools-bar {
-                display: none;
-            }
 
-            #top-tools-bar {
-                display: flex;
-            }
-        }
-        /*#endregion MORE_THAN_SMARTFON */
-        /*#endregion MEDIA*/
+@media only screen and (min-width: 576px) {
+    #mobile-top-tools-bar {
+        display: none;
+    }
+
+    #top-tools-bar {
+        display: flex;
+    }
+}
+/*#endregion MEDIA*/
