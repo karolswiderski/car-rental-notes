@@ -73,7 +73,14 @@
                                     <div class="add-btn-box back-btn-box max-height"><i class="fas fa-plus add-option-img"></i></div>
                                     <div class="edit-btn-box back-btn-box max-height"></div>
                                     <div class="space-for-new-btn"></div>
-                                    <div class="delete-btn-box back-btn-box max-height"><a class="fas fa-times delete-option-img" href="/Board/DeleteNote/@item.Board_Id"></a></div>
+                                    @if (User.IsInRole("Administrator"))
+                                    {
+                                        <div class="delete-btn-box back-btn-box max-height"><a class="fas fa-times delete-option-img delete" href="/Board/DeleteNote/@item.Board_Id"></a></div>
+                                    }
+                                    else if (User.IsInRole("Administrator"))
+                                    {
+                                        <div class="delete-btn-box back-btn-box max-height"></div>
+                                    }
                                 </div>
                                 <div class="back-side-content max-width max-height">
                                     <div class="back-box-1 max-width">@item.Zlecajacy</div>

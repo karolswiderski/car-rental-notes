@@ -61,7 +61,7 @@
                             <b>@item.Temat</b>
                             @if (User.IsInRole("Administrator"))
                             {
-                                <a href="/Wall/DeleteAnnouncement/@item.Announcement_Id">[ usuń ogłoszenie ]</a>
+                                <a href="/Wall/DeleteAnnouncement/@item.Announcement_Id" class="delete">[ usuń ogłoszenie ]</a>
                             }
                         </div>
                         <div class="ann-content">@item.Tresc</div>
