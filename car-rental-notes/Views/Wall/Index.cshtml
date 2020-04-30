@@ -15,13 +15,27 @@
     @section mobile_top_tools_bar{
         <div id="mobile-ann-top-tools-box-1" class="top-mobile"> </div>
         <div id="mobile-ann-top-tools-box-2" class="top-mobile"><span class="mobile-be-center">OGŁOSZENIA</span></div>
-        <div id="mobile-ann-top-tools-box-3" class="top-mobile"><i class="fas fa-plus be-center" id="mobile-add-new-ann-btn"></i></div>
+        @if (User.IsInRole("Administrator"))
+        {
+            <div id="mobile-ann-top-tools-box-3" class="top-mobile"><i class="fas fa-plus be-center" id="mobile-add-new-ann-btn"></i></div>
+        }
+        else if (User.IsInRole("Kierowca"))
+        {
+            <div id="mobile-ann-top-tools-box-3" class="top-mobile"></div>
+        }
     }
 
     @section top_tools_bar{
         <div id="ann-top-tools-box-1"></div>
         <div id="ann-top-tools-box-2"><span class="be-center">OGŁOSZENIA</span></div>
-        <div id="ann-top-tools-box-3"><i class="fas fa-plus be-center" id="add-new-ann-btn"></i></div>
+        @if (User.IsInRole("Administrator"))
+        {
+            <div id="ann-top-tools-box-3"><i class="fas fa-plus be-center" id="add-new-ann-btn"></i></div>
+        }
+        else if (User.IsInRole("Kierowca"))
+        {
+            <div id="ann-top-tools-box-3"></div>
+        }
     }
 
     <div id="anns">
@@ -45,7 +59,10 @@
                     <div class="ann-main-box">
                         <div class="ann-subject">
                             <b>@item.Temat</b>
-                            <a href="/Wall/DeleteAnnouncement/@item.Announcement_Id">[ usuń ogłoszenie ]</a>
+                            @if (User.IsInRole("Administrator"))
+                            {
+                                <a href="/Wall/DeleteAnnouncement/@item.Announcement_Id">[ usuń ogłoszenie ]</a>
+                            }
                         </div>
                         <div class="ann-content">@item.Tresc</div>
                         <div class="ann-author">utworzono <i>@item.Data.Date.ToString("dd.MM.yyyy")</i> przez <i>@item.Autor</i></div>

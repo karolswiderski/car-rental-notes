@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <link href="~/StylesCSS/Board/IndexCSS.css" rel="stylesheet" /> 
+    <link href="~/StylesCSS/Board/IndexCSS.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/board_index")
 
     {
@@ -17,13 +17,22 @@
     <body>
         <div id="board-top-bar"></div>
         <div id="mobile-board-index-top-tools-bar">
+
             @section mobile_top_tools_bar{
                 <div id="mobile-top-tools-box-1" class="mobile-top same-width"> <span>@TempData["Counter"]</span> </div>
                 <div id="mobile-top-tools-box-2" class="mobile-top same-width"> <a class="fas fa-angle-left"></a> </div>
                 <div id="mobile-top-tools-box-3" class="mobile-top"> <span>@TempData["SelectedDate"]</span> </div>
                 <div id="mobile-top-tools-box-4" class="mobile-top same-width"> <a class="fas fa-angle-right"></a> </div>
-                <div id="mobile-top-tools-box-5" class="mobile-top same-width"> <i class="fas fa-angle-double-down" id="mobile-btn-addnewnote"></i> </div>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <div id="mobile-top-tools-box-5" class="mobile-top same-width"> <i class="fas fa-angle-double-down" id="mobile-btn-addnewnote"></i> </div>
+                }
+                else if (User.IsInRole("Kierowca"))
+                {
+                    <div id="mobile-top-tools-box-5" class="mobile-top same-width">  </div>
+                }
             }
+
         </div>
         <div id="board-index-top-tools-bar">
             @section top_tools_bar{
@@ -31,7 +40,14 @@
                 <div id="top-tools-box-2"> <a class="fas fa-angle-left"></a> </div>
                 <div id="top-tools-box-3"> <span>@TempData["SelectedDate"]</span> </div>
                 <div id="top-tools-box-4"> <a class="fas fa-angle-right"></a> </div>
-                <div id="top-tools-box-5"> <i class="fas fa-angle-double-down" id="btn-addnewnote"></i> </div>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <div id="top-tools-box-5"> <i class="fas fa-angle-double-down" id="btn-addnewnote"></i> </div>
+                }
+                else if (User.IsInRole("Kierowca"))
+                {
+                    <div id="top-tools-box-5">  </div>
+                }
             }
         </div>
         <div id="add-new-note-content">
