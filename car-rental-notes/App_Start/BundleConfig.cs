@@ -16,14 +16,14 @@ namespace car_rental_notes
                 "~/Scripts/myScripts/Board/operations-with-note.js",
                 "~/Scripts/myScripts/Board/operations-with-topToolsBar.js",
                 "~/Scripts/myScripts/Board/set-note-layout.js",
-                "~/Scripts/myScripts/Other/confirm-deleting.js"));
+                "~/Scripts/myScripts/Other/confirm.js"));
 
             bundles.Add(new StyleBundle("~/bundles/addnewnote").Include(
                 "~/Scripts/myScripts/Board/addnewnote-date-and-timepicker.js"));
 
             bundles.Add(new StyleBundle("~/bundles/wall").Include(
                 "~/Scripts/myScripts/Wall/show-addannouncement.js",
-                "~/Scripts/myScripts/Other/confirm-deleting.js"));
+                "~/Scripts/myScripts/Other/confirm.js"));
 
             bundles.Add(new StyleBundle("~/bundles/account").Include(
                 "~/Scripts/myScripts/Account/myaccount-set-partial.js"));

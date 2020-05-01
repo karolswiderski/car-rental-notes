@@ -111,7 +111,8 @@ namespace car_rental_notes.Controllers
                     Samochod = boardVM.Samochod,
                     Uwagi = boardVM.Uwagi,
                     Rodzaj_Operacji = opDTO.Nazwa,
-                    Rodzaj_Operacji_Id = boardVM.Rodzaj_Operacji_Id
+                    Rodzaj_Operacji_Id = boardVM.Rodzaj_Operacji_Id,
+                    Wykonawca = "-"
                 };
 
                 db.Board.Add(newNote);
@@ -146,7 +147,33 @@ namespace car_rental_notes.Controllers
 
         }
 
+        public ActionResult IllDoIt(string userName, int noteId)
+        {
+            using (Db db = new Db())
+            {
+                BoardDTO note = db.Board.Find(noteId);
+                UsersDTO user = db.Users.FirstOrDefault(x => x.Login == userName);
+                note.Wykonawca = userName;
+                note.Wykonawca_Id = user.User_Id;
+                db.SaveChanges();
+            }
+            
+            return RedirectToAction("Index");
+        }
 
+
+        public ActionResult IllNotDoIt(int noteId)
+        {
+            using (Db db = new Db())
+            {
+                BoardDTO note = db.Board.Find(noteId);
+                note.Wykonawca = "-";
+                note.Wykonawca_Id = 0;
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
 
 
 

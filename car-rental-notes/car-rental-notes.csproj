@@ -225,7 +225,7 @@
     <Content Include="Scripts\myScripts\Board\show-addnewnote.js" />
     <Content Include="Scripts\myScripts\Layout\left-menu.js" />
     <Content Include="Scripts\myScripts\Layout\set-display.js" />
-    <Content Include="Scripts\myScripts\Other\confirm-deleting.js" />
+    <Content Include="Scripts\myScripts\Other\confirm.js" />
     <Content Include="Scripts\myScripts\Wall\show-addannouncement.js" />
     <Content Include="StylesCSS\Account\LoginCSS.css" />
     <Content Include="StylesCSS\Account\MyAccountCSS.css" />
