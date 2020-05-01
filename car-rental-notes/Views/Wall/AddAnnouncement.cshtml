@@ -2,15 +2,12 @@
 @if (Request.IsAuthenticated)
 {
     <link href="~/StylesCSS/Wall/AnnouncementsCSS.css" rel="stylesheet" />
-
     using (@Html.BeginForm("AddAnnouncement", "Wall", FormMethod.Post, htmlAttributes: new { @id = "add-new-ann-main" }))
     {
         <div id="add-new-ann-box">
             <div id="information-box"><span>DODAJ NOWE ZLECENIE</span></div>
-
             <div class="box"> @Html.EditorFor(model => model.Temat, new { htmlAttributes = new { @placeholder = " temat ", @class = "temat editors" } })</div>
             <div class="box"> @Html.TextAreaFor(model => model.Tresc, new { @placeholder = " uwagi [max 200 słów]", @class = "uwagi editors" })</div>
-
             <button id="add-ann-btn"><strong>WYŚLIJ</strong></button>
         </div>
     }

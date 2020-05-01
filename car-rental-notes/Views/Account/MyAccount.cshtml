@@ -4,44 +4,33 @@
         ViewBag.Title = "Moje konto";
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
-
     @Scripts.Render("~/bundles/account")
     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="~/StylesCSS/Account/MyAccountCSS.css" rel="stylesheet" />
-
     <body>
         @section mobile_top_tools_bar{
             <div id="mobile-myaccount-top-tools-box-1"> <span class="top-tools-span">historia zleceń</span> </div>
             <div id="mobile-myaccount-top-tools-box-2"> <span class="top-tools-span">operacje dzisiaj</span> </div>
             <div id="mobile-myaccount-top-tools-box-3"> <span class="top-tools-span">zaplanowane operacje</span> </div>
         }
-
         @section top_tools_bar{
             <div id="myaccount-top-tools-box-1" #mobile-board-index-top-tools-bar> <span class="top-tools-span">historia zleceń</span> </div>
             <div id="myaccount-top-tools-box-2"> <span class="top-tools-span">operacje dzisiaj</span> </div>
             <div id="myaccount-top-tools-box-3"> <span class="top-tools-span">zaplanowane operacje</span> </div>
         }
-
         <div id="page-content-box">
             <div id="myOperations-history-partial">
                 <div id="myOperations-content">
-
                     @foreach (var item in Model)
                     {
                         if (Convert.ToDateTime(item.Data_Operacji.ToString("dd/MM/yyyy")) < @Convert.ToDateTime(TempData["Today"]))
                         {
-                            <div class="myOperations-date-box">
-                                <span>@item.Data_Operacji.ToString("dd/MM/yyyy") <i class="fas fa-caret-down"></i></span>
-                            </div>
-
-                            <div class="my-operations-partial-box">
-                                @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })
-                            </div>
+                            <div class="myOperations-date-box"><span>@item.Data_Operacji.ToString("dd/MM/yyyy") <i class="fas fa-caret-down"></i></span></div>
+                            <div class="my-operations-partial-box"> @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })</div>
                         }
                     }
                 </div>
             </div>
-
             <div id="myOperations-today-partial">
                 <div id="myOperations-content">
                     @foreach (var item in Model)
@@ -49,30 +38,21 @@
                         if (Convert.ToDateTime(item.Data_Operacji.ToString("dd/MM/yyyy")) == @Convert.ToDateTime(TempData["Today"]))
                         {
                             <div id="today-box">
-                                <div class="myOperations-date-box">
-                                    <span>DZISIAJ <i class="fas fa-caret-down"></i></span>
-                                </div>
-                                <div class="my-operations-partial-box" style="border:none;">
-                                    @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })
-                                </div>
+                                <div class="myOperations-date-box"><span>DZISIAJ <i class="fas fa-caret-down"></i></span></div>
+                                <div class="my-operations-partial-box" style="border:none;">@Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })</div>
                             </div>
                         }
                     }
                 </div>
             </div>
-
             <div id="myOperations-future-partial">
                 <div id="myOperations-content">
                     @foreach (var item in Model)
                     {
                         if (Convert.ToDateTime(item.Data_Operacji.ToString("dd/MM/yyyy")) > @Convert.ToDateTime(TempData["Today"]))
                         {
-                            <div class="myOperations-date-box">
-                                <span>@item.Data_Operacji.ToString("dd/MM/yyyy") <i class="fas fa-caret-down"></i></span>
-                            </div>
-                            <div class="my-operations-partial-box">
-                                @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })
-                            </div>
+                            <div class="myOperations-date-box"><span>@item.Data_Operacji.ToString("dd/MM/yyyy") <i class="fas fa-caret-down"></i></span></div>
+                            <div class="my-operations-partial-box"> @Html.Action("MyOperationsPartial", "Account", new { operationData = item.Data_Operacji.ToString() })</div>
                         }
                     }
                 </div>

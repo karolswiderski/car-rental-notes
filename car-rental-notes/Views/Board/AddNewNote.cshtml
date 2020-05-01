@@ -6,31 +6,26 @@
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-
     using (@Html.BeginForm("AddNewNote", "Board", FormMethod.Post, htmlAttributes: new { @id = "add-main-box" }))
     {
         <div id="add-new-note-box">
             <div id="information-box"><span>DODAJ NOWE ZLECENIE</span></div>
-
-            <div id="">@Html.DropDownListFor(model => model.Rodzaj_Operacji_Id, Model.Operations, "wybierz rodzaj zlecenia", new { @class = "rodzaj-operacji"})</div>
-
+            <div id="">@Html.DropDownListFor(model => model.Rodzaj_Operacji_Id, Model.Operations, "wybierz rodzaj zlecenia", new { @class = "rodzaj-operacji" })</div>
             <ul id="add-new-note-list">
                 <li>
-                    @Html.EditorFor(model => model.Data_Operacji, new { htmlAttributes = new { @Value= TempData["thisDay"], @class = "data-operacji editors", @type = "text", @id = "datepicker" } })
-                    @Html.EditorFor(model => model.Godzina_Operacji, new { htmlAttributes = new { @Value = TempData["thisHour"], @class = "godzina-operacji editors"} })
+                    @Html.EditorFor(model => model.Data_Operacji, new { htmlAttributes = new { @Value = TempData["thisDay"], @class = "data-operacji editors", @type = "text", @id = "datepicker" } })
+                    @Html.EditorFor(model => model.Godzina_Operacji, new { htmlAttributes = new { @Value = TempData["thisHour"], @class = "godzina-operacji editors" } })
                 </li>
                 <li>
                     @Html.EditorFor(model => model.Klasa_Pojazdu, new { htmlAttributes = new { @placeholder = " klasa pojazdu ", @class = "klasa-pojazdu editors" } })
                     @Html.EditorFor(model => model.Samochod, new { htmlAttributes = new { @placeholder = " samochód / rejestracja ", @class = "samochod editors" } })
                 </li>
-
                 <li>
                     @Html.EditorFor(model => model.Miejsce_Operacji, new { htmlAttributes = new { @placeholder = " miejsce operacji ", @class = "miejsce-operacji editors" } })
                 </li>
                 <li>
                     @Html.EditorFor(model => model.Nazwa_Klienta, new { htmlAttributes = new { @placeholder = " nazwa klienta ", @class = "nazwa-klienta editors" } })
                 </li>
-
                 <li>
                     @Html.EditorFor(model => model.Telefon, new { htmlAttributes = new { @placeholder = " telefon ", @class = "telefon  editors" } })
                 </li>
@@ -38,9 +33,7 @@
                     @Html.EditorFor(model => model.Zlecajacy, new { htmlAttributes = new { @placeholder = " zlecający ", @class = "zlecajacy editors" } })
                 </li>
             </ul>
-
             <div id="uwagi-box"> @Html.TextAreaFor(model => model.Uwagi, new { @placeholder = " uwagi [max 200 słów]", @class = "uwagi editors" })</div>
-
             <button id="add-note-btn"><strong>WYŚLIJ</strong></button>
         </div>
         @Scripts.Render("~/bundles/addnewnote")

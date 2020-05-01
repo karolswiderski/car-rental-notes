@@ -216,7 +216,6 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\myScripts\Account\myaccount-set-partial.js" />
     <Content Include="Scripts\myScripts\Board\addnewnote-date-and-timepicker.js" />
     <Content Include="Scripts\myScripts\Board\operations-with-note.js" />

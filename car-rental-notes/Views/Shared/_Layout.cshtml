@@ -9,23 +9,19 @@
     <link href="@Url.Content("~/StylesCSS/Layout/LayoutCSS.css")" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 </head>
 <body>
-
     <div id="main-container">
         <div id="left-menu-container">
             <div id="logo-box"></div>
-
             <nav id="left-menu-navigation">
                 <ul>
                     <li>MENU</li>
                 </ul>
             </nav>
-
             <div id="main-menu-box">
                 <ul id="mmb-ul-element">
                     @if (Request.IsAuthenticated)
@@ -38,26 +34,19 @@
                     }
                 </ul>
             </div>
-
             <div id="back-to-content-box">
                 <i id="back-to-content-btn" onclick="" class="far fa-arrow-alt-circle-left"></i>
             </div>
         </div>
-
         <div id="page-content">
             <div id="content-box">
                 <div id="mobile-top-tools-bar">@RenderSection("mobile_top_tools_bar", false)</div>
-
                 <div id="open-left-menu-i" onclick=""><i class="fas fa-bars"></i></div>
-
                 <div id="top-tools-bar">@RenderSection("top_tools_bar", false)</div>
-
                 <div id="render-body-box">@RenderBody();</div>
-
             </div>
         </div>
     </div>
-
     @Scripts.Render("~/bundles/layout")
     @RenderSection("scripts", required: false)
 </body>

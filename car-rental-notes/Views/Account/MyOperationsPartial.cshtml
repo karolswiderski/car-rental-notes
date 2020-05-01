@@ -1,41 +1,26 @@
 ﻿@model IEnumerable<car_rental_notes.Models.ViewModels.Board.BoardVM>
 @if (Request.IsAuthenticated)
 {
-
     <link href="~/StylesCSS/Board/IndexCSS.css" rel="stylesheet" />
-
     @Scripts.Render("~/bundles/board_index")
-
     <ul id="table" style="width:100%;">
-
         @foreach (var item in Model)
         {
             <li>
                 <div class="single-note-box" id="@item.Board_Id" accesskey="9">
                     <div class="front-note-side max-width max-height">
-
                         <div class="front-box-2 max-width">@item.Rodzaj_Operacji</div>
-
                         <div class="front-box-3 max-width">@item.Miejsce_Operacji</div>
-
                         <div class="front-box-4 max-width">klasa @item.Klasa_Pojazdu</div>
-
                         <div class="front-box-5 max-width">@item.Godzina_Operacji.ToString("hh':'mm")</div>
-
                     </div>
                     <div class="back-note-side max-width max-height">
                         <div class="back-side-content max-width max-height">
-
                             <div class="back-box-1 max-width">@item.Zlecajacy</div>
-
                             <div class="back-box-2 max-width">@item.Nazwa_Klienta</div>
-
                             <div class="back-box-3 max-width">@item.Telefon</div>
-
                             <div class="back-box-4 max-width"> @item.Samochod</div>
-
                             <div class="back-box-5 max-width"> @item.Uwagi</div>
-
                         </div>
                     </div>
                 </div>

@@ -112,7 +112,8 @@ namespace car_rental_notes.Controllers
                     Uwagi = boardVM.Uwagi,
                     Rodzaj_Operacji = opDTO.Nazwa,
                     Rodzaj_Operacji_Id = boardVM.Rodzaj_Operacji_Id,
-                    Wykonawca = "-"
+                    Wykonawca = "-",
+                    Wykonawca_Id = 0
                 };
 
                 db.Board.Add(newNote);
@@ -147,6 +148,8 @@ namespace car_rental_notes.Controllers
 
         }
 
+        // GET: Board/IllDoIt
+        [HttpGet]
         public ActionResult IllDoIt(string userName, int noteId)
         {
             using (Db db = new Db())
@@ -161,7 +164,8 @@ namespace car_rental_notes.Controllers
             return RedirectToAction("Index");
         }
 
-
+        // GET: Board/IllNotDoIt
+        [HttpGet]
         public ActionResult IllNotDoIt(int noteId)
         {
             using (Db db = new Db())
