@@ -9,7 +9,6 @@
 * [Main Features](#main-features)
 * [Screenshots](#screenshots)
 * [Status](#status)
-* [Inspiration and Motivation](#inspiration)
 * [Contact](#contact)
 
 ## General info:
