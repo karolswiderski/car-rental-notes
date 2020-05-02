@@ -41,10 +41,10 @@
 
 ## Main Features:
  
- [x] Intuitive access to board with notes sorted by days,
- [x] Adding new note and deleting existing ones,
- [x] User Accounts with function which adding note to a user account,
- [x] Board with announcements.
+- Intuitive access to board with notes sorted by days,
+- Adding new note and deleting existing ones,
+- User Accounts with function which adding note to a user account,
+- Board with announcements.
 
 ## Status:
 
@@ -53,9 +53,9 @@ The project is finished.
 ## Contact: 
 
 Created by Karol Świderski. 
-[:fa-linkedin-square: /Karol Świderski](https://www.linkedin.com/in/karol-%C5%9Bwiderski-212477195/)
-[:fa-git-square: /karolswiderski](https://github.com/karolswiderski/)
-[:fa-envelope: /kswiderski98@gmail.com]()
+[linkedin ](https://github.com/karolswiderski/)
+[github ](https://github.com/karolswiderski/)
+kswiderski98@gmail.com
 
 ## END
 
