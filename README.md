@@ -17,8 +17,12 @@
 
 ## Technologies:
 
-- ASP.NET MVC,
-- Entity Framework.
+- ASP.NET MVC (.NET Framework 4.7.2)
+- Entity Framework 6.4
+- HTML5
+- CSS3
+- JavaScript
+- jQuery
 
 ## Running Project:
 
